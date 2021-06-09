@@ -1,0 +1,2 @@
+require('nvLSP.lua-lsp')
+
