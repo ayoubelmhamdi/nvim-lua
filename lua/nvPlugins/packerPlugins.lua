@@ -40,4 +40,5 @@ require('packer').startup(function()
   use 'tpope/vim-fugitive'           -- Git commands in nvim
   use 'tpope/vim-rhubarb'            -- Fugitive-companion to interact with github
   use 'tpope/vim-commentary'         -- "gc" to comment visual regions/lines
-end)
+  -- TELESCOPE
+  use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} } end)
