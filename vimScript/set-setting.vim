@@ -19,7 +19,7 @@ set sw=4 " -- Change the number of space characters inserted for indentation
 
 
 
-set wrap 
+set nowrap 
 set autoindent
 set smartindent	
 
