@@ -1,1 +1,2 @@
-require('nvPlugins.all-plugins')
+require('nvPlugins.packerPlugins')
+require('nvPlugins.telescope')

@@ -1,70 +1,72 @@
 
 " extend  setting by vimScripte 
-source $HOME/.config/nvim/vimScript/set-setting.vim
+source ~/.config/nvim/vimScript/set-setting.vim
+source ~/.config/nvim/vimScript/confPlugins/autocomplition.vim
+source ~/.config/nvim/vimScript/confPlugins/telescope.vim
 
 
 
 """"    " Source Active
 """"    " vim set + theme
-""""    source $HOME/.config/nvim/vimScript/top.vim
-""""    source $HOME/.config/nvim/vimScript/mycolor.vim
-""""    source $HOME/.config/nvim/vimScript/sublime.vim
+""""    source ~/.config/nvim/vimScript/top.vim
+""""    source ~/.config/nvim/vimScript/mycolor.vim
+""""    source ~/.config/nvim/vimScript/sublime.vim
 """"    "vim spell
-""""    source $HOME/.config/nvim/vimScript/spell.vim
+""""    source ~/.config/nvim/vimScript/spell.vim
 """"    
 """"    " Plugin
 """"    " incsearch
-""""    source $HOME/.config/nvim/vimScript/incsearch.vim
+""""    source ~/.config/nvim/vimScript/incsearch.vim
 """"    " esay motion
-""""    source $HOME/.config/nvim/vimScript/easyMotion.vim
+""""    source ~/.config/nvim/vimScript/easyMotion.vim
 """"    "sneak
-""""    " source $HOME/.config/nvim/vimScript/sneak.vim
+""""    " source ~/.config/nvim/vimScript/sneak.vim
 """"    " fzf
-""""    source $HOME/.config/nvim/vimScript/fzf.vim
+""""    source ~/.config/nvim/vimScript/fzf.vim
 """"    " "fast fold
-""""    " source $HOME/.config/nvim/vimScript/fastfold.vim
+""""    " source ~/.config/nvim/vimScript/fastfold.vim
 """"    
 """"    " Programation
 """"    " js
-""""    source $HOME/.config/nvim/vimScript/javascript.vim
-""""    source $HOME/.config/nvim/vimScript/map/javascript.vim
+""""    source ~/.config/nvim/vimScript/javascript.vim
+""""    source ~/.config/nvim/vimScript/map/javascript.vim
 """"    
 """"    "IDE VIM
 """"    " coc 
-""""    source $HOME/.config/nvim/vimScript/coc/extensions.vim
-""""    source $HOME/.config/nvim/vimScript/coc/coc.vim
-""""    source $HOME/.config/nvim/vimScript/map/coc.vim
+""""    source ~/.config/nvim/vimScript/coc/extensions.vim
+""""    source ~/.config/nvim/vimScript/coc/coc.vim
+""""    source ~/.config/nvim/vimScript/map/coc.vim
 """"    " vimspector
-""""    " source $HOME/.config/nvim/vimScript/vimspector.vim
+""""    " source ~/.config/nvim/vimScript/vimspector.vim
 """"    "syntastic
-""""    " source $HOME/.config/nvim/vimScript/syntastic.vim
-""""    " source $HOME/.config/nvim/vimScript/map/syntastic.vim
+""""    " source ~/.config/nvim/vimScript/syntastic.vim
+""""    " source ~/.config/nvim/vimScript/map/syntastic.vim
 """"    " surround
-""""    source $HOME/.config/nvim/vimScript/surround.vim
+""""    source ~/.config/nvim/vimScript/surround.vim
 """"    " Gramare
-""""    " source $HOME/.config/nvim/vimScript/gramar.vim
-""""    " source $HOME/.config/nvim/vimScript/gramar.map.vim
+""""    " source ~/.config/nvim/vimScript/gramar.vim
+""""    " source ~/.config/nvim/vimScript/gramar.map.vim
 """"    " yocompleme
-""""    " source $HOME/.config/nvim/vimScript/yocompleteme.vim
-""""    " source $HOME/.config/nvim/vimScript/yocompleteme-map.vim
+""""    " source ~/.config/nvim/vimScript/yocompleteme.vim
+""""    " source ~/.config/nvim/vimScript/yocompleteme-map.vim
 """"    
 """"    " add thermiball by scripte vim
-""""    source $HOME/.config/nvim/vimScript/terminal.vim
+""""    source ~/.config/nvim/vimScript/terminal.vim
 """"    
 """"    
 """"    " Source Disactive
-""""    " source $HOME/.config/nvim/vimScript/vimwiki.vim
-""""    " source $HOME/.config/nvim/vimScript/goyo.vim
-""""    " source $HOME/.config/nvim/vimScript/fzf.vim
-""""    " source $HOME/.config/nvim/vimScript/easy-motion.vim
-""""    " source $HOME/.config/nvim/vimScript/undotree.vim
-""""    " source $HOME/.config/nvim/vimScript/emmet.vim
-""""    " source $HOME/.config/nvim/vimScript/table-mode.vim
-""""    " source $HOME/.config/nvim/vimScript/git-gutter.vim
-""""    " source $HOME/.config/nvim/vimScript/airline.vim
-""""    " source $HOME/.config/nvim/vimScript/hexokinase.vim
-""""    " source $HOME/.config/nvim/vimScript/fern.vim
-""""    " source $HOME/.config/nvim/vimScript/closetag.vim
+""""    " source ~/.config/nvim/vimScript/vimwiki.vim
+""""    " source ~/.config/nvim/vimScript/goyo.vim
+""""    " source ~/.config/nvim/vimScript/fzf.vim
+""""    " source ~/.config/nvim/vimScript/easy-motion.vim
+""""    " source ~/.config/nvim/vimScript/undotree.vim
+""""    " source ~/.config/nvim/vimScript/emmet.vim
+""""    " source ~/.config/nvim/vimScript/table-mode.vim
+""""    " source ~/.config/nvim/vimScript/git-gutter.vim
+""""    " source ~/.config/nvim/vimScript/airline.vim
+""""    " source ~/.config/nvim/vimScript/hexokinase.vim
+""""    " source ~/.config/nvim/vimScript/fern.vim
+""""    " source ~/.config/nvim/vimScript/closetag.vim
 """"    "map Active
 """"    source ~/.config/nvim/vimScript/map/amap.vim
 """"    source ~/.config/nvim/vimScript/map/nmap.vim
@@ -89,9 +91,9 @@ source $HOME/.config/nvim/vimScript/set-setting.vim
 """"    
 """"    
 """"    "which key
-""""    source $HOME/.config/nvim/vimScript/which-key.vim
+""""    source ~/.config/nvim/vimScript/which-key.vim
 """"    " bottom vim conf
-""""    source $HOME/.config/nvim/vimScript/bottom.vim
+""""    source ~/.config/nvim/vimScript/bottom.vim
 """"    
 """"    
 

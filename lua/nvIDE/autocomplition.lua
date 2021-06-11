@@ -25,7 +25,6 @@ require'compe'.setup {
   };
 }
 
-vim.cmd('source ~/.config/nvim/vimScript/confPlugins/autocomplition.vim')
 
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
