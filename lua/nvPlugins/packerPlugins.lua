@@ -38,7 +38,9 @@ require('packer').startup(function()
 
 
   -- theme
-  use {'morhetz/gruvbox'}
+  --use {'morhetz/gruvbox'}
+  use {'tjdevries/colorbuddy.vim'}
+  use {'tjdevries/gruvbuddy.nvim'}
 
 
   -- Git 

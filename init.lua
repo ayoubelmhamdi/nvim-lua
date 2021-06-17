@@ -6,6 +6,7 @@ require('nvPlugins')
 require('nvSettings')
 require('nvLSP')
 require('nvIDE')
+require('nvTheme')
 
 
 
