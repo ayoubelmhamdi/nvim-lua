@@ -41,6 +41,8 @@ require('packer').startup(function()
   --use {'morhetz/gruvbox'}
   use {'tjdevries/colorbuddy.vim'}
   use {'tjdevries/gruvbuddy.nvim'}
+  -- windows
+  use 'sunjon/shade.nvim'
 
 
   -- Git 
@@ -54,3 +56,4 @@ require('packer').startup(function()
   
   -- REGISTRE
   use {'gennaro-tedesco/nvim-peekup'}
+  
