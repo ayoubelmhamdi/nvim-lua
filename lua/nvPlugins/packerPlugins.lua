@@ -20,8 +20,6 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'       -- Package manager
 
 
-
-
   -- LSP+IDE
   use {'neovim/nvim-lspconfig'}     -- LSP default config
   use {'hrsh7th/nvim-compe'}
@@ -29,16 +27,28 @@ require('packer').startup(function()
   --use {'SirVer/ultisnips'}
   use {'hrsh7th/vim-vsnip'}
 
---  use {'junegunn/fzf', run = fn['fzf#install']}
+
+  -- FIND FILE AND STRING
   use {'junegunn/fzf.vim'}
   use {'ojroques/nvim-lspfuzzy'}
   use {'nvim-treesitter/nvim-treesitter'}
-
-  -- theme
-  use 'morhetz/gruvbox'
-
-  use 'tpope/vim-fugitive'           -- Git commands in nvim
-  use 'tpope/vim-rhubarb'            -- Fugitive-companion to interact with github
-  use 'tpope/vim-commentary'         -- "gc" to comment visual regions/lines
   -- TELESCOPE
   use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} } end)
+
+
+
+  -- theme
+  use {'morhetz/gruvbox'}
+
+
+  -- Git 
+  use {'tpope/vim-fugitive'}           -- Git commands in nvim
+  use {'tpope/vim-rhubarb'}            -- Fugitive-companion to interact with github
+  -- vim commentary
+  use {'tpope/vim-commentary'}         -- "gc" to comment visual regions/lines
+
+
+  -- more cosmusation
+  
+  -- REGISTRE
+  use {'gennaro-tedesco/nvim-peekup'}
