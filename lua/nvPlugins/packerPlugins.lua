@@ -50,6 +50,10 @@ require('packer').startup(function()
   use {'tjdevries/gruvbuddy.nvim'}
   -- windows
   use 'sunjon/shade.nvim'
+  -- Tab
+  use {'kyazdani42/nvim-web-devicons'}
+  use {'romgrk/barbar.nvim'}
+
 
 
   -- Git 
