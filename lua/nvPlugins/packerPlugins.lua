@@ -27,13 +27,20 @@ require('packer').startup(function()
   --use {'SirVer/ultisnips'}
   use {'hrsh7th/vim-vsnip'}
 
-
   -- FIND FILE AND STRING
   use {'junegunn/fzf.vim'}
   use {'ojroques/nvim-lspfuzzy'}
   use {'nvim-treesitter/nvim-treesitter'}
-  -- TELESCOPE
   use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} } end)
+
+  -- Spell
+  use {
+    -- Optional but recommended
+    -- 'nvim-treesitter/nvim-treesitter',
+    'lewis6991/spellsitter.nvim',
+  }
+
+
 
 
 
