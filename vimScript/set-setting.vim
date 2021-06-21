@@ -40,13 +40,16 @@ set wildignore+=*.o,*.obj,.git,*.pyc
 set wildignore+=eggs/**
 set wildignore+=*.egg-info/**
 
+set directory=$HOME/.local/vim/dir/,.
+
 set noswapfile
 set nowritebackup
+
+set backupdir=$HOME/.local/vim/backup
 set nobackup
+
+set undodir+=$HOME/.local/vim/undodir
 set undofile
-set backupdir=$HOME/.local/tmp//,.
-set directory=$HOME/.local/tmp//,.
-set undodir=$HOME/.local/tmp//,.
 
 
 
