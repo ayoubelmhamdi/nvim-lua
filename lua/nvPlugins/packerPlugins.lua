@@ -51,8 +51,12 @@ require('packer').startup(function()
   -- windows
   use 'sunjon/shade.nvim'
   -- Tab
-  use {'kyazdani42/nvim-web-devicons'}
-  use {'romgrk/barbar.nvim'}
+  use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
+  -- Status line
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
 
 
 
