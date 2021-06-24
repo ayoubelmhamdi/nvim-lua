@@ -1,2 +1,2 @@
-require('nvLSP.lua-lsp')
+require('nvLSP.lua-ls')
 
