@@ -26,6 +26,7 @@ require('packer').startup(function()
   use {'honza/vim-snippets'}
   --use {'SirVer/ultisnips'}
   use {'hrsh7th/vim-vsnip'}
+  use {"kabouzeid/nvim-lspinstall"}
 
   -- FIND FILE AND STRING
   use {'junegunn/fzf.vim'}
