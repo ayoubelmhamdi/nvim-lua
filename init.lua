@@ -1,5 +1,5 @@
 vim.cmd('let startvim = reltime()') -- at the beginin
--- INIT NVIM
+-- INIT NVIM ==> 
 
 
 require('nvPlugins')

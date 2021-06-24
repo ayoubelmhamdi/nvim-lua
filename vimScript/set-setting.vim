@@ -33,7 +33,7 @@ set backspace=indent,eol,start
 set colorcolumn=60
 set scrolloff=7
 
-set mouse=a
+" set mouse=a
 set updatetime=300
 " Ignore these files when completing
 set wildignore+=*.o,*.obj,.git,*.pyc
