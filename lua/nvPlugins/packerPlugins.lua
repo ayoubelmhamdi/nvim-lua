@@ -4,9 +4,6 @@ local execute = vim.api.nvim_command
 
 local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
---if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  --execute('!git clone https://github.com/wbthomason/packer.nvim '.. install_path)
---end
 
 vim.api.nvim_exec([[
   augroup Packer
@@ -26,7 +23,6 @@ require('packer').startup(function()
   use {'honza/vim-snippets'}
   --use {'SirVer/ultisnips'}
   use {'hrsh7th/vim-vsnip'}
-  use {"kabouzeid/nvim-lspinstall"}
 
   -- FIND FILE AND STRING
   use {'junegunn/fzf.vim'}
@@ -35,11 +31,7 @@ require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} } end)
 
   -- Spell
-  use {
-    -- Optional but recommended
-    -- 'nvim-treesitter/nvim-treesitter',
-    'lewis6991/spellsitter.nvim',
-  }
+  use { 'lewis6991/spellsitter.nvim' }
 
 
 
