@@ -29,6 +29,8 @@ require('packer').startup(function()
   use {'ojroques/nvim-lspfuzzy'}
   use {'nvim-treesitter/nvim-treesitter'}
   use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} } end)
+  --Registre
+  use "tversteeg/registers.nvim"
 
   -- Spell
   use { 'lewis6991/spellsitter.nvim' }
