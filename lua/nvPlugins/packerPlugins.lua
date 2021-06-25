@@ -2,6 +2,8 @@
 
 local execute = vim.api.nvim_command
 
+
+
 local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 
@@ -34,6 +36,10 @@ require('packer').startup(function()
 
   -- Spell
   use { 'lewis6991/spellsitter.nvim' }
+
+
+  --Git
+  use {'f-person/git-blame.nvim'}
 
 
 
