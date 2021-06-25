@@ -33,6 +33,8 @@ require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} } end)
   --Registre
   use "tversteeg/registers.nvim"
+  -- Sneak motions
+  use 'ggandor/lightspeed.nvim'
 
   -- Spell
   use { 'lewis6991/spellsitter.nvim' }
