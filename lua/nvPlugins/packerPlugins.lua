@@ -1,10 +1,7 @@
 -- Install packer
 
 local execute = vim.api.nvim_command
-
-
-
-local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+-- local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 
 vim.api.nvim_exec([[
@@ -43,7 +40,10 @@ require('packer').startup(function()
   --Git
   use {'f-person/git-blame.nvim'}
 
-
+  -- TODO-VIEWER
+  -- NOTE: T-O-D-O HACK WARN PERF NOTE
+  -- TodoTrouble TodoTelescope TodoQuickFix 
+  use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim", config = function() require("todo-comments").setup {} end }
 
 
 
