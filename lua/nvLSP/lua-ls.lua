@@ -1,7 +1,6 @@
-
+-- lua server module
 local system_name
 USER = vim.fn.expand('$USER')
-
 
 if vim.fn.has("mac") == 1 then
   system_name = "macOS"
@@ -27,6 +26,7 @@ table.insert(runtime_path, "lua/?/init.lua")
 
 require'lspconfig'.sumneko_lua.setup {
   cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
+  -- capabilities = capabilities,
   settings = {
     Lua = {
       runtime = {
@@ -37,7 +37,10 @@ require'lspconfig'.sumneko_lua.setup {
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+        -- globals = {'vim'},
+        enable = true,
+        globals = {"vim", "map", "filter", "range", "reduce", "head", "tail", "nth", "use"},
+        disable = {"lowercase-global"}
       },
       workspace = {
         -- Make the server aware of Neovim runtime files
@@ -50,5 +53,6 @@ require'lspconfig'.sumneko_lua.setup {
       },
     },
   },
+  on_attach = on_attach
 }
 
