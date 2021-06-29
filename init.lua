@@ -4,7 +4,6 @@ vim.cmd('let startvim = reltime()') -- at the beginin
 
 require('nvPlugins')
 require('nvSettings')
-require('lsp')
 require('nvLSP')
 require('nvIDE')
 require('nvTheme')
