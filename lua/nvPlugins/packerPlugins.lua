@@ -1,6 +1,6 @@
 -- Install packer
 
-local execute = vim.api.nvim_command
+-- local execute = vim.api.nvim_command
 -- local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 
@@ -18,10 +18,13 @@ require('packer').startup(function()
 
   -- LSP+IDE
   use {'neovim/nvim-lspconfig'}     -- LSP default config
+  use {'mfussenegger/nvim-dap' , config = function() require("todo-comments").setup {} end }
   use {'hrsh7th/nvim-compe'}
   use {'honza/vim-snippets'}
   --use {'SirVer/ultisnips'}
   use {'hrsh7th/vim-vsnip'}
+  -- fluter/dart
+  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 
   -- FIND FILE AND STRING
   use {'junegunn/fzf.vim'}
