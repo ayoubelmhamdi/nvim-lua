@@ -47,6 +47,8 @@ require('packer').startup(function()
   -- NOTE: T-O-D-O HACK WARN PERF NOTE
   -- TodoTrouble TodoTelescope TodoQuickFix 
   use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim", config = function() require("todo-comments").setup {} end }
+  -- auto save
+  use { '907th/vim-auto-save' }
 
 
 

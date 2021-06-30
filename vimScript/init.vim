@@ -5,6 +5,7 @@ source ~/.config/nvim/vimScript/keyMappings.vim
 source ~/.config/nvim/vimScript/confPlugins/autocomplition.vim
 source ~/.config/nvim/vimScript/confPlugins/telescope.vim
 source ~/.config/nvim/vimScript/confPlugins/tabline.vim
+source ~/.config/nvim/vimScript/confPlugins/autosave.vim
 
 
 
