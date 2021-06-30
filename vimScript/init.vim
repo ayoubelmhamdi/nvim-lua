@@ -1,6 +1,7 @@
 
 " extend  setting by vimScripte 
-source ~/.config/nvim/vimScript/set-setting.vim
+source ~/.config/nvim/vimScript/setSetting.vim
+source ~/.config/nvim/vimScript/keyMappings.vim
 source ~/.config/nvim/vimScript/confPlugins/autocomplition.vim
 source ~/.config/nvim/vimScript/confPlugins/telescope.vim
 source ~/.config/nvim/vimScript/confPlugins/tabline.vim
