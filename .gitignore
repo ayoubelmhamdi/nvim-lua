@@ -21,3 +21,4 @@ plugin/
 lua-language-server/
 plugin/
 chris-lsp/
+remove.lua
