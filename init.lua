@@ -1,5 +1,5 @@
-vim.cmd('let startvim = reltime()') -- at the beginin
--- INIT NVIM ==> 
+vim.cmd('let startvim = reltime()') -- start chrono
+-- INIT NVIM
 
 
 require('nvPlugins')
@@ -12,7 +12,7 @@ require('nvTheme')
 
 -- config in vimScript
 vim.cmd('source ~/.config/nvim/vimScript/init.vim')
-vim.cmd('echo reltimestr(reltime(startvim))') -- at the end
+vim.cmd('echo reltimestr(reltime(startvim))') -- end chrono
 
 
 

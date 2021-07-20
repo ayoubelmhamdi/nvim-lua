@@ -15,7 +15,6 @@ nnoremap <right> :vertical resize +2<cr>
 
 
 " remove word
-inoremap <A-BS> <esc>:set nocursorline<cr>lcb<esc>:set cursorline<cr>i
 
 " Basic file system commands
 " nnoremap <A-o> :!touch<Space>

@@ -1,4 +1,5 @@
-#require('nvTheme.gruvbuddy')
+-- #require('nvTheme.gruvbuddy')
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd('colorscheme gruvbox')
+require('nvTheme.blankline')
 

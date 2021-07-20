@@ -20,17 +20,4 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<tab>', ':bnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-tab>', ':bprevious<CR>', { noremap = true, silent = true })
 
--- tab complition
---vim.api.nvim_set_keymap('i', '<expr><TAB>', 'pumvisible() ? \"\\<C-n>\" : \"\\<TAB>\"', { noremap = true, silent = true })
 map('i', '<C-u>', '<C-g>u<C-u>')  -- Make <C-u> undo-friendly
-
-
-
---    -- Set some keybinds conditional on server capabilities
---    if client.resolved_capabilities.document_formatting then
---        buf_set_keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
---    elseif client.resolved_capabilities.document_range_formatting then
---        buf_set_keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
---    end
-
-
