@@ -36,10 +36,6 @@ require'lspconfig'.sumneko_lua.setup {
         preloadFileSize = 50000,
         -- library = vim.api.nvim_get_runtime_file("", true),
         -- library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
-        library = {
-          [vim.fn.expand'~/.luarocks/share/lua/5.3'] = true,
-          ['/usr/share/lua/5.3'] = true
-       }
       },
       -- Do not send telemetry data containing a randomized but unique identifier
       telemetry = {

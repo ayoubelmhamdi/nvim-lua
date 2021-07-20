@@ -13,13 +13,16 @@ function()
    -- LSP+IDE
    use {'neovim/nvim-lspconfig'}
    use {'hrsh7th/nvim-compe'}
-   use {'honza/vim-snippets'}
+   -- engeen: hrsh7th/vim-vsnip[vimScript], L3MON4D3/LuaSnip[lua], coc-snippets[vim-snippets]
+   use 'L3MON4D3/LuaSnip'
+   -- data sinippets
+   use "rafamadriz/friendly-snippets"
+   -- use {'honza/vim-snippets'}
    -- use {'mfussenegger/nvim-dap'}
    -- use {'SirVer/ultisnips'}
-   use {'hrsh7th/vim-vsnip'}
    use {'akinsho/flutter-tools.nvim'}
 
-   use {'junegunn/fzf.vim'}
+   -- use {'junegunn/fzf.vim'}
    --use 'ggandor/lightspeed.nvim' -- Sneak motions
 
 
@@ -40,8 +43,10 @@ function()
    use {'907th/vim-auto-save'}
    use {'tpope/vim-fugitive'}
    use {'tpope/vim-commentary'}
-   use {'lewis6991/spellsitter.nvim'}
-   use {"folke/todo-comments.nvim", config = function() require("todo-comments").setup {} end }
+   -- use {'lewis6991/spellsitter.nvim'}
+   use 'tjdevries/train.nvim'
+   use 'phaazon/hop.nvim'
+   use {"folke/todo-comments.nvim"  }
    -- REGISTRE
    --use {'gennaro-tedesco/nvim-peekup'}
    --Or

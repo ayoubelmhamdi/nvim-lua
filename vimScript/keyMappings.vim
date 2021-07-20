@@ -8,6 +8,14 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
+nnoremap <up> :resize +2<cr>
+nnoremap <down> :resize -2<cr>
+nnoremap <left> :vertical resize -2<cr>
+nnoremap <right> :vertical resize +2<cr>
+
+
+" remove word
+inoremap <A-BS> <esc>:set nocursorline<cr>lcb<esc>:set cursorline<cr>i
 
 " Basic file system commands
 " nnoremap <A-o> :!touch<Space>
@@ -24,15 +32,26 @@ inoremap jj <esc>
 
 
 " Alias replace all to
-vnoremap <A-s> y:s///gI<Left><Left><Left><Left><C-r>0
+vnoremap <A-s> y:s///gI<Left><Left><Left><Left><C-r>0<right>
 
 " _co is best than c i dont know why
-" nnoremap c "_c
 
 " Prevent x from overriding what's in the clipboard.
 " use this tow symbole "_ after motion, 
-noremap x "_x
-noremap X "_X
+xnoremap x "_x
+xnoremap X "_X
+xnoremap c "_c
+xnoremap C "_C
+
+vnoremap x "_x
+vnoremap X "_X
+vnoremap c "_c
+vnoremap C "_C
+
+nnoremap x "_x
+nnoremap X "_X
+nnoremap c "_c
+nnoremap C "_C
 
 " Prevent selecting and pasting from overwriting what you originally copied.
 xnoremap p pgvy
@@ -41,10 +60,10 @@ xnoremap p pgvy
 " vmap y ygv<Esc>
 
 " TTT: changr indent original tab to
-    nnoremap > v>
-    nnoremap < v<
-    vnoremap > >gv
-    vnoremap < <gv
+nnoremap > v>
+nnoremap < v<
+vnoremap > >gv
+vnoremap < <gv
 
 
 
