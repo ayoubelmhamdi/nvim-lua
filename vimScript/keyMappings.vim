@@ -1,7 +1,11 @@
 "
 "mapping by vim scripte
 "
-
+" :on<cr>:tabn<cr>
+nnoremap <silent> <leader>fr :FlutterRun<cr>
+nnoremap <silent> <leader>ft :FlutterRestart<cr>
+nnoremap <silent> <leader>fp :FlutterPubGet<cr>
+nnoremap <silent> <leader>fq :FlutterQuit<cr>
 
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>

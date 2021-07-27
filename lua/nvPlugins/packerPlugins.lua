@@ -15,6 +15,12 @@ function()
    use 'hrsh7th/nvim-compe'
    -- engeen: hrsh7th/vim-vsnip[vimScript], L3MON4D3/LuaSnip[lua], coc-snippets[vim-snippets]
    use 'L3MON4D3/LuaSnip'
+   use 'Neevash/awesome-flutter-snippets'
+
+   -- <C-j/l> for flutter snippet
+   use 'hrsh7th/vim-vsnip'
+   use 'hrsh7th/vim-vsnip-integ'
+
    -- data sinippets
    use "rafamadriz/friendly-snippets"
    -- use 'honza/vim-snippets'
