@@ -8,7 +8,11 @@ function()
    use 'ojroques/nvim-lspfuzzy'
    use 'nvim-treesitter/nvim-treesitter'
    use 'nvim-telescope/telescope.nvim'
+   -- use 'nvim-telescope/telescope-frecency.nvim'
+   use 'nvim-telescope/telescope-project.nvim'
+   use 'nvim-telescope/telescope-fzf-native.nvim'
    use 'kyazdani42/nvim-web-devicons'
+   use 'tami5/sql.nvim'
 
 -- LSP+IDE
    use 'neovim/nvim-lspconfig'
@@ -27,7 +31,7 @@ function()
    -- use 'mfussenegger/nvim-dap'
    -- use 'SirVer/ultisnips'
    use 'akinsho/flutter-tools.nvim'
-   use 'junegunn/fzf.vim'
+   -- use 'junegunn/fzf.vim'  -- write by vimScript languages
    use 'windwp/nvim-autopairs'
    use 'blackCauldron7/surround.nvim'
 

@@ -1,6 +1,15 @@
 "
 "mapping by vim scripte
-"
+
+
+" fluter key
+inoremap // <cr><C-o>O^I
+inoremap coo Colors.
+" inoremap <space>, <Right>,<Left><Left>
+" inoremap ,, <Space>,<Left>
+inoremap <space>, <Space>,<Left>
+inoremap ,, <Right>,<Left><Left>
+
 " :on<cr>:tabn<cr>
 nnoremap <silent> <leader>fr :FlutterRun<cr>
 nnoremap <silent> <leader>ft :FlutterRestart<cr>
