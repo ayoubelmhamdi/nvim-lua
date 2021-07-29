@@ -2,8 +2,12 @@
 "mapping by vim scripte
 
 
+
+
+
+
 " fluter key
-inoremap // <cr><C-o>O^I
+inoremap // <cr><C-o>O<TAB>
 inoremap coo Colors.
 " inoremap <space>, <Right>,<Left><Left>
 " inoremap ,, <Space>,<Left>
