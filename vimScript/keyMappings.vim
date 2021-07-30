@@ -1,12 +1,20 @@
 "
 "mapping by vim scripte
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ) )<c-g>u
+inoremap ] ]<c-g>u
+inoremap } }<c-g>u
+inoremap ? ?<c-g>u
+inoremap ! !<c-g>u
 
 
+cnoremap W w
+cnoremap Q q
 
-function! BufferIsEmpty()
-    return line('$') == 1 && getline(1) == '' 
-endfunction
-
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
 
 function! Quitwindows()
     let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
@@ -20,8 +28,8 @@ function! Quitwindows()
     endif
 endfunction
 nnoremap <silent> <Space>q :call Quitwindows()<cr>
-" nnoremap 00 :source%<cr>:call Quitwindows()<cr>
 
+" TODO: use ftPlugin to manage dart file
 " fluter key
 inoremap // <cr><C-o>O<TAB>
 inoremap coo color:<Space>Colors.
@@ -62,7 +70,7 @@ nnoremap <right> :vertical resize +2<cr>
 
 " fix p y
 nnoremap Y y$
-nnoremap V V$h
+nnoremap V v$h
 nnoremap <Space>w :w<cr>
 " fast exist in insert  mode
 inoremap jj <esc>
@@ -110,19 +118,19 @@ autocmd BufNewFile,BufRead requirements*.txt set syntax=python
 
 
 " dd = dd+1
-nnoremap 3dd 4dd
-nnoremap 4dd 5dd
-nnoremap 5dd 6dd
-nnoremap 6dd 7dd
-nnoremap 7dd 4dd
-nnoremap 8dd 9dd
-nnoremap 9dd 10dd
+" nnoremap 3dd 4dd
+" nnoremap 4dd 5dd
+" nnoremap 5dd 6dd
+" nnoremap 6dd 7dd
+" nnoremap 7dd 4dd
+" nnoremap 8dd 9dd
+" nnoremap 9dd 10dd
 
 
 " Move 1 more lines up or down in normal and visual selection modes.
-nnoremap K :m .-2<CR>==
-nnoremap J :m .+1<CR>==
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
-
-
+inoremap <C-k> <C-o>:m .-2<CR>
+inoremap <C-j> <C-o>:m .+1<CR>
+nnoremap <Space>j :m .-2<CR>==
+nnoremap <Space>k :m .+1<CR>==

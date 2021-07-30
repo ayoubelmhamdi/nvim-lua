@@ -18,6 +18,10 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
 
 -- fast buffer
 vim.api.nvim_set_keymap('n', '<tab>', ':tabn<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-tab>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-tab>', ':tabp<CR>', { noremap = true, silent = true })
+
+
+vim.api.nvim_set_keymap('n', '<Space><tab>', ':bn<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space><S-tab>', ':bp<CR>', { noremap = true, silent = true })
 
 map('i', '<C-u>', '<C-g>u<C-u>')  -- Make <C-u> undo-friendly
