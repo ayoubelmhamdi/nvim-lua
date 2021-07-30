@@ -3,12 +3,30 @@
 
 
 
+function! BufferIsEmpty()
+    return line('$') == 1 && getline(1) == '' 
+endfunction
 
 
+function! Quitwindows()
+    let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+    if  s:total_nr_buffers == 1
+      "bufname(0) == ''
+      " bufexists(0) &&
+      exit! 
+      echo "vide"
+    else
+      bw
+    endif
+endfunction
+nnoremap <silent> <Space>q :call Quitwindows()<cr>
+" nnoremap 00 :source%<cr>:call Quitwindows()<cr>
 
 " fluter key
 inoremap // <cr><C-o>O<TAB>
-inoremap coo Colors.
+inoremap coo color:<Space>Colors.
+inoremap baa backgroundColor:<Space>Colors.
+inoremap tee child: Text(),<Left><left>
 " inoremap <space>, <Right>,<Left><Left>
 " inoremap ,, <Space>,<Left>
 inoremap <space>, <Space>,<Left>
@@ -30,6 +48,9 @@ nnoremap <down> :resize -2<cr>
 nnoremap <left> :vertical resize -2<cr>
 nnoremap <right> :vertical resize +2<cr>
 
+"
+" nnoremap <Space>q :bdelete<cr>
+
 
 " remove word
 
@@ -48,7 +69,7 @@ inoremap jj <esc>
 
 
 " Alias replace all to
-vnoremap <A-s> y:s///gI<Left><Left><Left><Left><C-r>0<right>
+vnoremap <A-s> y:%s///g<Left><Left><Left><Left><C-r>0<right>
 
 " _co is best than c i dont know why
 
