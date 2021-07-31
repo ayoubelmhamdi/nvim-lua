@@ -17,19 +17,30 @@ function()
 -- LSP+IDE
    use 'neovim/nvim-lspconfig'
    use 'hrsh7th/nvim-compe'
-   -- engeen: hrsh7th/vim-vsnip[vimScript], L3MON4D3/LuaSnip[lua], coc-snippets[vim-snippets]
-   use 'L3MON4D3/LuaSnip'
-   use 'Neevash/awesome-flutter-snippets'
 
-   -- <C-j/l> for flutter snippet
+   -- option 1 :vimscript
    use 'hrsh7th/vim-vsnip'
    use 'hrsh7th/vim-vsnip-integ'
+   use "rafamadriz/friendly-snippets"
+   use 'Neevash/awesome-flutter-snippets'
+   -- option 2: lua
+   --
+   -- option 3: mix
+   -- engeen:
+   -- hrsh7th/vim-vsnip[vimScript], L3MON4D3/LuaSnip[lua], coc-snippets[vim-snippets]
+   -- use 'L3MON4D3/LuaSnip'
+
+   -- <C-j/l> for flutter snippet
+   -- use 'Neevash/awesome-flutter-snippets'
+   -- use 'hrsh7th/vim-vsnip'
+   -- use 'hrsh7th/vim-vsnip-integ'
 
    -- data sinippets
-   use "rafamadriz/friendly-snippets"
+   -- use "rafamadriz/friendly-snippets"
    -- use 'honza/vim-snippets'
    -- use 'mfussenegger/nvim-dap'
    -- use 'SirVer/ultisnips'
+
    use 'akinsho/flutter-tools.nvim'
    -- use 'junegunn/fzf.vim'  -- write by vimScript languages
    use 'windwp/nvim-autopairs'

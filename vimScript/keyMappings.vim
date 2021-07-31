@@ -37,7 +37,7 @@ inoremap baa backgroundColor:<Space>Colors.
 inoremap tee child: Text(),<Left><left>
 " inoremap <space>, <Right>,<Left><Left>
 " inoremap ,, <Space>,<Left>
-inoremap <space>, <Space>,<Left>
+inoremap ,<space> <Space>,<Left>
 inoremap ,, <Right>,<Left><Left>
 
 " :on<cr>:tabn<cr>
@@ -130,7 +130,7 @@ autocmd BufNewFile,BufRead requirements*.txt set syntax=python
 " Move 1 more lines up or down in normal and visual selection modes.
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
-inoremap <C-k> <C-o>:m .-2<CR>
-inoremap <C-j> <C-o>:m .+1<CR>
-nnoremap <Space>j :m .-2<CR>==
-nnoremap <Space>k :m .+1<CR>==
+" inoremap <C-J> <C-o>:m .+1<CR>
+" inoremap <C-K> <C-o>:m .-2<CR>
+nnoremap <Space>k :m .-2<CR>==
+nnoremap <Space>j :m .+1<CR>==
