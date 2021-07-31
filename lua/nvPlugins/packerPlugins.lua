@@ -23,6 +23,7 @@ function()
    use 'hrsh7th/vim-vsnip-integ'
    use "rafamadriz/friendly-snippets"
    use 'Neevash/awesome-flutter-snippets'
+   use 'zyllus17/flutter-snippets'
    -- option 2: lua
    --
    -- option 3: mix

@@ -70,7 +70,7 @@ nnoremap <right> :vertical resize +2<cr>
 
 " fix p y
 nnoremap Y y$
-nnoremap V v$h
+nnoremap V V$h
 nnoremap <Space>w :w<cr>
 " fast exist in insert  mode
 inoremap jj <esc>
