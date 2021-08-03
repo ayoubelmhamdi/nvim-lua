@@ -1,6 +1,13 @@
 
+--TODO: make plugin for use to source map (nmap imap ... nnoremap inoremap..)
 -- lua key mapping
-local function map(mode, lhs, rhs, opts) local options = {noremap = true} if opts then options = vim.tbl_extend('force', options, opts) end vim.api.nvim_set_keymap(mode, lhs, rhs, options) end
+local function map(mode, lhs, rhs, opts)
+  local options = {noremap = true}
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
 
 -- order is important for mapeader
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
@@ -13,15 +20,10 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 
 
--- fast go to normal mode
-vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
 
 -- fast buffer
-vim.api.nvim_set_keymap('n', '<tab>', ':tabn<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-tab>', ':tabp<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<tab>', ':bn<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-tab>', ':bp<CR>', { noremap = true, silent = true })
 
-
-vim.api.nvim_set_keymap('n', '<Space><tab>', ':bn<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Space><S-tab>', ':bp<CR>', { noremap = true, silent = true })
 
 map('i', '<C-u>', '<C-g>u<C-u>')  -- Make <C-u> undo-friendly

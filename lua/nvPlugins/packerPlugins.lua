@@ -1,6 +1,7 @@
-   local use = require('packer').use
-   require('packer').startup(
+local use = require('packer').use
+require('packer').startup(
 function()
+  -- j
 -- Dependencies:
    use 'wbthomason/packer.nvim'
    use 'nvim-lua/popup.nvim'
@@ -21,11 +22,14 @@ function()
    -- option 1 :vimscript
    use 'hrsh7th/vim-vsnip'
    use 'hrsh7th/vim-vsnip-integ'
-   use "rafamadriz/friendly-snippets"
+   -- use "rafamadriz/friendly-snippets"
    use 'Neevash/awesome-flutter-snippets'
    use 'zyllus17/flutter-snippets'
    -- option 2: lua
-   --
+   use 'L3MON4D3/LuaSnip'
+   use 'zyllus17/flutter-snippets'
+   use "rafamadriz/friendly-snippets"
+   use 'Neevash/awesome-flutter-snippets'
    -- option 3: mix
    -- engeen:
    -- hrsh7th/vim-vsnip[vimScript], L3MON4D3/LuaSnip[lua], coc-snippets[vim-snippets]
@@ -37,10 +41,10 @@ function()
    -- use 'hrsh7th/vim-vsnip-integ'
 
    -- data sinippets
-   -- use "rafamadriz/friendly-snippets"
-   -- use 'honza/vim-snippets'
-   -- use 'mfussenegger/nvim-dap'
-   -- use 'SirVer/ultisnips'
+   use "rafamadriz/friendly-snippets"
+   use 'honza/vim-snippets'
+   use 'mfussenegger/nvim-dap'
+   use 'SirVer/ultisnips'
 
    use 'akinsho/flutter-tools.nvim'
    -- use 'junegunn/fzf.vim'  -- write by vimScript languages
@@ -48,17 +52,21 @@ function()
    use 'blackCauldron7/surround.nvim'
 
 
- -- theme
+ -- theme+line
    use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
    use 'lukas-reineke/indent-blankline.nvim'
    -- use {'morhetz/gruvbox'}
    -- use {'tjdevries/colorbuddy.vim'}
    -- use {'tjdevries/gruvbuddy.nvim'}
 
-   -- Tab
-   use 'akinsho/nvim-bufferline.lua'
+   -- Tabline
+   -- use 'akinsho/nvim-bufferline.lua'
+   use 'romgrk/barbar.nvim'
+
    -- Status line
-   use 'hoob3rt/lualine.nvim'
+   -- use 'hoob3rt/lualine.nvim'
+   -- use 'kosayoda/nvim-lightbulb'
+   -- use 'beauwilliams/statusline.lua'
 
 
 -- Misc

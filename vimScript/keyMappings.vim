@@ -1,7 +1,5 @@
 "
 "mapping by vim scripte
-inoremap , ,<c-g>u
-inoremap . .<c-g>u
 inoremap ) )<c-g>u
 inoremap ] ]<c-g>u
 inoremap } }<c-g>u
@@ -31,14 +29,13 @@ nnoremap <silent> <Space>q :call Quitwindows()<cr>
 
 " TODO: use ftPlugin to manage dart file
 " fluter key
-inoremap // <cr><C-o>O<TAB>
-inoremap coo color:<Space>Colors.
-inoremap baa backgroundColor:<Space>Colors.
-inoremap tee child: Text(),<Left><left>
+inoremap <C-space>/ <cr><C-o>O<TAB>
+inoremap <C-space>c color:<Space>Colors.
+inoremap <C-space>b backgroundColor:<Space>Colors.
 " inoremap <space>, <Right>,<Left><Left>
 " inoremap ,, <Space>,<Left>
-inoremap ,<space> <Space>,<Left>
-inoremap ,, <Right>,<Left><Left>
+inoremap <C-space>, <Space>,<Left>
+inoremap <C-space><C-,> <Right>,oo<Left><Left>
 
 " :on<cr>:tabn<cr>
 nnoremap <silent> <leader>fr :FlutterRun<cr>
@@ -73,7 +70,7 @@ nnoremap Y y$
 nnoremap V V$h
 nnoremap <Space>w :w<cr>
 " fast exist in insert  mode
-inoremap jj <esc>
+inoremap <C-space><C-space> <esc>
 
 
 " Alias replace all to

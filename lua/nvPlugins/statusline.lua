@@ -1,4 +1,5 @@
 -- look at : https://github.com/hoob3rt/lualine.nvim
+--[[
 require'lualine'.setup {
   options = {
     icons_enabled = true,
@@ -26,3 +27,8 @@ require'lualine'.setup {
   tabline = {},
   extensions = {}
 }
+---]]
+
+-- local statusline = require('statusline')
+-- statusline.tabline = false
+
