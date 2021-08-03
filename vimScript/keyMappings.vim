@@ -51,10 +51,10 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
-nnoremap <up> :resize +2<cr>
-nnoremap <down> :resize -2<cr>
-nnoremap <left> :vertical resize -2<cr>
-nnoremap <right> :vertical resize +2<cr>
+nnoremap <C-up> :resize +2<cr>
+nnoremap <C-down> :resize -2<cr>
+nnoremap <C-left> :vertical resize -2<cr>
+nnoremap <C-right> :vertical resize +2<cr>
 
 "
 " nnoremap <Space>q :bdelete<cr>
@@ -77,7 +77,7 @@ inoremap jj <esc>
 
 
 " Alias replace all to
-vnoremap <A-s> y:%s///g<Left><Left><Left><Left><C-r>0<right>
+vnoremap <A-s> y:%s///g<Left><Left><Left><C-r>0<right>
 
 " _co is best than c i dont know why
 

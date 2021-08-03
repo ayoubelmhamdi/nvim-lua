@@ -1,6 +1,7 @@
 
 -- alternatively you can override the default configs
 require("flutter-tools").setup {
+
   -- ui = {
   --   -- the border type to use for all floating windows, the same options/formats
   --   -- used for ":h nvim_open_win" e.g. "single" | "shadow" | {<table-of-eight-chars>}
@@ -29,5 +30,5 @@ require("flutter-tools").setup {
   -- outline = {
   --   open_cmd = "30vnew", -- command to use to open the outline buffer
   -- },
-}
 
+}
