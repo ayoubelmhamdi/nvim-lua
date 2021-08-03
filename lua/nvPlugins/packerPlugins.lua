@@ -23,8 +23,8 @@ function()
    use 'hrsh7th/vim-vsnip'
    use 'hrsh7th/vim-vsnip-integ'
    -- use "rafamadriz/friendly-snippets"
-   use 'Neevash/awesome-flutter-snippets'
-   use 'zyllus17/flutter-snippets'
+   -- use 'Neevash/awesome-flutter-snippets'
+   -- use 'zyllus17/flutter-snippets'
    -- option 2: lua
    use 'L3MON4D3/LuaSnip'
    use 'zyllus17/flutter-snippets'
@@ -41,10 +41,10 @@ function()
    -- use 'hrsh7th/vim-vsnip-integ'
 
    -- data sinippets
-   use "rafamadriz/friendly-snippets"
-   use 'honza/vim-snippets'
-   use 'mfussenegger/nvim-dap'
-   use 'SirVer/ultisnips'
+   -- use "rafamadriz/friendly-snippets"
+   -- use 'honza/vim-snippets'
+   -- use 'mfussenegger/nvim-dap'
+   -- use 'SirVer/ultisnips'
 
    use 'akinsho/flutter-tools.nvim'
    -- use 'junegunn/fzf.vim'  -- write by vimScript languages
@@ -64,7 +64,7 @@ function()
    use 'romgrk/barbar.nvim'
 
    -- Status line
-   -- use 'hoob3rt/lualine.nvim'
+   use 'hoob3rt/lualine.nvim'
    -- use 'kosayoda/nvim-lightbulb'
    -- use 'beauwilliams/statusline.lua'
 
