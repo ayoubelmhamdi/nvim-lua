@@ -1,7 +1,6 @@
 local use = require('packer').use
 require('packer').startup(
 function()
-  -- j
 -- Dependencies:
    use 'wbthomason/packer.nvim'
    use 'nvim-lua/popup.nvim'

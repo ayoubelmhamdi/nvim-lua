@@ -73,11 +73,11 @@ local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
 
-ins_left {
-  function() return '▊' end,
-  color = {fg = colors.blue}, -- Sets highlighting of component
-  left_padding = 0 -- We don't need space before this
-}
+-- ins_left {
+--   function() return '▊' end,
+--   color = {fg = colors.blue}, -- Sets highlighting of component
+--   left_padding = 0 -- We don't need space before this
+-- }
 
 ins_left {
   -- mode component
@@ -138,12 +138,12 @@ ins_left {
 ins_left {
   'filename',
   condition = conditions.buffer_not_empty,
-  color = {fg = colors.magenta, gui = 'bold'}
+  color = {fg = colors.magenta}
 }
 
-ins_left {'location'}
+-- ins_left {'location'}
 
-ins_left {'progress', color = {fg = colors.fg, gui = 'bold'}}
+-- ins_left {'progress', color = {fg = colors.fg}}
 
 ins_left {
   'diagnostics',
@@ -174,9 +174,11 @@ ins_left {
     return msg
   end,
   icon = ' LSP:',
-  color = {fg = '#ffffff', gui = 'bold'}
+  color = {fg = '#ffffff'}
 }
 
+--[[
+--UTF-8
 -- Add components to right sections
 ins_right {
   'o:encoding', -- option component same as &encoding in viml
@@ -184,36 +186,42 @@ ins_right {
   condition = conditions.hide_in_width,
   color = {fg = colors.green, gui = 'bold'}
 }
+--]]
 
+--[[
+-- UNIX
 ins_right {
   'fileformat',
   upper = true,
   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
   color = {fg = colors.green, gui = 'bold'}
 }
+--]]
 
 ins_right {
   'branch',
   icon = '',
   condition = conditions.check_git_workspace,
-  color = {fg = colors.violet, gui = 'bold'}
+  color = {fg = colors.violet}
 }
 
 ins_right {
   'diff',
-  -- Is it me or the symbol for modified us really weird
-  symbols = {added = ' ', modified = '柳 ', removed = ' '},
+  symbols = {added = '|  ', modified = '| 柳', removed = '|  '},
   color_added = colors.green,
-  color_modified = colors.orange,
+  color_modified = colors.yellow,
   color_removed = colors.red,
   condition = conditions.hide_in_width
 }
 
+--[[
+-- just rectange blue in end
 ins_right {
   function() return '▊' end,
   color = {fg = colors.blue},
   right_padding = 0
 }
+--]]
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
