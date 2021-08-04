@@ -24,8 +24,10 @@ function()
    -- use "rafamadriz/friendly-snippets"
    -- use 'Neevash/awesome-flutter-snippets'
    -- use 'zyllus17/flutter-snippets'
+
    -- option 2: lua
    use 'L3MON4D3/LuaSnip'
+   use 'uga-rosa/luasnip_open'
    use 'zyllus17/flutter-snippets'
    use "rafamadriz/friendly-snippets"
    use 'Neevash/awesome-flutter-snippets'
@@ -69,7 +71,9 @@ function()
 
 
 -- Misc
-   use '907th/vim-auto-save'
+   use '907th/vim-auto-save' -- auto save files like dart
+   use 'rmagatti/auto-session' -- save session layout
+   use 'rmagatti/session-lens' -- save session layout with telescope
    use 'tpope/vim-fugitive'
    use 'tpope/vim-commentary'
    -- use 'lewis6991/spellsitter.nvim'

@@ -1,7 +1,6 @@
 -- IDE
 require('nvIDE.treesitter')
--- require('nvIDE.AI')
-require('nvIDE.AI-luasnip')
---require('nvIDE.efm') --aide for view complition and snippet
+require('nvIDE.compe')        -- tested for first than luasnip
+require('nvIDE.luasnip')
 require('nvIDE.autopair')
 require('nvIDE.surround')

@@ -9,6 +9,6 @@
   -- keys = {
   --   brightness_up    = '<C-Up>9s',
   --   brightness_down  = '<C-Down>9s',
-  --   toggle           = '<Leader>9s',
+  --   toggle           = '<Space>9s',
   -- }
 -- })

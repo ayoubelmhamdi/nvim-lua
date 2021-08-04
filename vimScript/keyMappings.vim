@@ -1,11 +1,38 @@
-"
+nnoremap <space>ca  <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <space>rn  <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <space>ff  <cmd>lua vim.lsp.buf.formatting()<CR>
+
+
+nnoremap gD         <Cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap gd         <Cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <space>K   <Cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap gi         <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <C-k>      <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <space>wa  <cmd>lua vim.lsp.buf.add_workspace_folder()<CR>
+nnoremap <space>wr  <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
+nnoremap <space>wl  <cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>
+nnoremap <space>D   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap gr         <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <space>e   <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap [d         <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap ]d         <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <space>q   <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+
+nnoremap <Space>h   :set hlsearch!<cr>
+nnoremap <Space>e   :Lexplore<cr>
+nnoremap <Tab>      :bn<cr>
+nnoremap <S-Tab>    :bp<cr>
+
+
+" delet last word/sentens/line it's work  if use save point bellow 
+" inoremap <C-u> <C-g>u<C-u>
+
 "mapping by vim scripte
 inoremap ) )<c-g>u
 inoremap ] ]<c-g>u
 inoremap } }<c-g>u
 inoremap ? ?<c-g>u
 inoremap ! !<c-g>u
-
 
 cnoremap W w
 cnoremap Q q
@@ -28,20 +55,18 @@ endfunction
 nnoremap <silent> <Space>q :call Quitwindows()<cr>
 
 " TODO: use ftPlugin to manage dart file
-" fluter key
+" flutter: key
 inoremap <C-space>/ <cr><C-o>O<TAB>
 inoremap <C-space>c color:<Space>Colors.
 inoremap <C-space>b backgroundColor:<Space>Colors.
-" inoremap <space>, <Right>,<Left><Left>
-" inoremap ,, <Space>,<Left>
 inoremap <C-space>, <Space>,<Left>
 inoremap <C-space><C-,> <Right>,oo<Left><Left>
 
 " :on<cr>:tabn<cr>
-nnoremap <silent> <leader>fr :FlutterRun<cr>
-nnoremap <silent> <leader>ft :FlutterRestart<cr>
-nnoremap <silent> <leader>fp :FlutterPubGet<cr>
-nnoremap <silent> <leader>fq :FlutterQuit<cr>
+" nnoremap <silent> <Space>fr :FlutterRun<cr>
+" nnoremap <silent> <Space>ft :FlutterRestart<cr>
+" nnoremap <silent> <Space>fp :FlutterPubGet<cr>
+" nnoremap <silent> <Space>fq :FlutterQuit<cr>
 
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
@@ -68,6 +93,7 @@ nnoremap <C-right> :vertical resize +2<cr>
 " fix p y
 nnoremap Y y$
 nnoremap V V$h
+" save and source this file if vim so% of lua lo%
 nnoremap <Space>w :w<cr>
 " fast exist in insert  mode
 inoremap <C-space><C-space> <esc>
@@ -75,6 +101,7 @@ inoremap <C-space><C-space> <esc>
 
 " Alias replace all to
 vnoremap <A-s> y:%s///g<Left><Left><Left><C-r>0<right>
+vnoremap <C-s> y:s///g<Left><Left><Left><C-r>0<right>
 
 " _co is best than c i dont know why
 
@@ -127,7 +154,7 @@ autocmd BufNewFile,BufRead requirements*.txt set syntax=python
 " Move 1 more lines up or down in normal and visual selection modes.
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
-" inoremap <C-J> <C-o>:m .+1<CR>
-" inoremap <C-K> <C-o>:m .-2<CR>
+inoremap <C-K> <C-o>:m .-2<CR>
+inoremap <C-J> <C-o>:m .+1<CR>
 nnoremap <Space>k :m .-2<CR>==
 nnoremap <Space>j :m .+1<CR>==
