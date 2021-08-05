@@ -22,3 +22,7 @@ lua-language-server/
 plugin/
 chris-lsp/
 remove.lua
+py.py
+lua.lua
+dart.dart
+

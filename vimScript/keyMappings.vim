@@ -5,17 +5,18 @@ nnoremap <space>ff  <cmd>lua vim.lsp.buf.formatting()<CR>
 
 nnoremap gD         <Cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap gd         <Cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <space>K   <Cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap gi         <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <C-k>      <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap gr         <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap [d         <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap ]d         <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+nnoremap <C-space>k      <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <space>K   <Cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <space>wa  <cmd>lua vim.lsp.buf.add_workspace_folder()<CR>
 nnoremap <space>wr  <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
 nnoremap <space>wl  <cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>
 nnoremap <space>D   <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap gr         <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <space>e   <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
-nnoremap [d         <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap ]d         <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <space>q   <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 
 nnoremap <Space>h   :set hlsearch!<cr>
@@ -154,7 +155,7 @@ autocmd BufNewFile,BufRead requirements*.txt set syntax=python
 " Move 1 more lines up or down in normal and visual selection modes.
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
-inoremap <C-K> <C-o>:m .-2<CR>
-inoremap <C-J> <C-o>:m .+1<CR>
+inoremap <C-space>k <C-o>:m .-2<CR>
+inoremap <C-space>j <C-o>:m .+1<CR>
 nnoremap <Space>k :m .-2<CR>==
 nnoremap <Space>j :m .+1<CR>==

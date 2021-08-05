@@ -7,7 +7,7 @@ require('nvSettings')
 require('nvLSP')
 require('nvIDE')
 require('nvTheme')
-
+require('luasnip.loaders.from_vscode').load()
 
 
 -- config in vimScript

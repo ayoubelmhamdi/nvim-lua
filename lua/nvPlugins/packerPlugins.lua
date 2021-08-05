@@ -19,22 +19,23 @@ function()
    use 'hrsh7th/nvim-compe'
 
    -- option 1 :vimscript
-   use 'hrsh7th/vim-vsnip'
-   use 'hrsh7th/vim-vsnip-integ'
+   -- use 'hrsh7th/vim-vsnip'
+   -- use 'hrsh7th/vim-vsnip-integ'
    -- use "rafamadriz/friendly-snippets"
    -- use 'Neevash/awesome-flutter-snippets'
    -- use 'zyllus17/flutter-snippets'
 
    -- option 2: lua
+   -- TODO: active lua snippets
+   -- use 'uga-rosa/luasnip_open'
    use 'L3MON4D3/LuaSnip'
-   use 'uga-rosa/luasnip_open'
-   use 'zyllus17/flutter-snippets'
-   use "rafamadriz/friendly-snippets"
-   use 'Neevash/awesome-flutter-snippets'
+   use "ayoubelmhamdi/friendly-snippets"
+   -- use 'zyllus17/flutter-snippets'
+   -- use 'Neevash/awesome-flutter-snippets'
+   -- use 'ayoubelmhamdi/flutterSnippets'
    -- option 3: mix
    -- engeen:
    -- hrsh7th/vim-vsnip[vimScript], L3MON4D3/LuaSnip[lua], coc-snippets[vim-snippets]
-   -- use 'L3MON4D3/LuaSnip'
 
    -- <C-j/l> for flutter snippet
    -- use 'Neevash/awesome-flutter-snippets'

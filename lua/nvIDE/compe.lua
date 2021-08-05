@@ -1,4 +1,4 @@
---
+---
 -- view vimscpite config :
 -- ~/.config/nvim/vimScript/confPlugins/autocomplition.vim
 
@@ -10,7 +10,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
 require'compe'.setup {
 
-  enabled = true;
+  enabled = true; 
   autocomplete = true;
   debug = false;
   min_length = 1;
@@ -33,28 +33,28 @@ require'compe'.setup {
 
   source = {
     path       = {kind = "  "},
-    buffer     = {kind = "  "},
+    buffer     = {kind = "  ",priority = 800},
     calc       = {kind = "  "},
     nvim_lsp   = {kind = "  ",priority = 800},
-    nvim_lua   = false; -- {kind = "  "};
+    nvim_lua   = {kind = "  "};
     tags       = true,
     spell      = {kind = "  "},
     treesitter = {kind = "  "},
     emoji      = {kind = " ﲃ ", filetypes={"markdown"}},
     --
-    luasnip    = true, -- {kind = "  ", priority = 1000},
+    luasnip    = {kind = "  ", priority = 1000},
     vsnip      = false,   --{kind = "  ", priority = 1000},
     ultisnips  = false,
 
-
     -- sort=false,
-    
   };
 
 }
 
 -- we don't need setting for vsnip;
 -- we need mapping for comp and vsnip for work
+
+
 
 
 
