@@ -1,5 +1,4 @@
 
-inoremap <silent><expr> <C-Space> compe#complete()
 " TODO: view autopaire suggection in
 " https://github.com/hrsh7th/nvim-compe#mappings
 " inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
@@ -7,6 +6,7 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+inoremap <silent><expr> <C-Space> compe#complete()
 
 " vim-vsnip require this for use tab with menu and tab for pace holder
 " imap <expr> <Tab>   pumvisible() ? "<C-n>" : vsnip#jumpable(1)   ? "<Plug>(vsnip-jump-next)" : "<Tab>"

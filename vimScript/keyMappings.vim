@@ -35,8 +35,7 @@ inoremap } }<c-g>u
 inoremap ? ?<c-g>u
 inoremap ! !<c-g>u
 
-cnoremap W w
-cnoremap Q q
+
 
 nnoremap n nzzzv
 nnoremap N Nzzzv
