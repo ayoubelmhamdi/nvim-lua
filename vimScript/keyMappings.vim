@@ -1,6 +1,8 @@
+"
+" LSP
 nnoremap <space>ca  <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <space>rn  <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <space>ff  <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <space>f   <cmd>lua vim.lsp.buf.formatting()<CR>
 
 
 nnoremap gD         <Cmd>lua vim.lsp.buf.declaration()<CR>
@@ -24,16 +26,23 @@ nnoremap <Space>e   :Lexplore<cr>
 nnoremap <Tab>      :bn<cr>
 nnoremap <S-Tab>    :bp<cr>
 
+" Telescope:
+nnoremap <Space>o <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <Space>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <Space>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <Space>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <Space>fs :Telescope current_buffer_fuzzy_find<cr>
+nnoremap <Space>rs :Telescope session-lens  search_session<cr>
 
 " delet last word/sentens/line it's work  if use save point bellow 
 " inoremap <C-u> <C-g>u<C-u>
 
 "mapping by vim scripte
-inoremap ) )<c-g>u
-inoremap ] ]<c-g>u
-inoremap } }<c-g>u
-inoremap ? ?<c-g>u
-inoremap ! !<c-g>u
+" inoremap ) )<c-g>u
+" inoremap ] ]<c-g>u
+" inoremap } }<c-g>u
+" inoremap ? ?<c-g>u
+" inoremap ! !<c-g>u
 
 
 
@@ -44,8 +53,6 @@ nnoremap J mzJ`z
 function! Quitwindows()
     let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
     if  s:total_nr_buffers == 1
-      "bufname(0) == ''
-      " bufexists(0) &&
       exit! 
       echo "vide"
     else
@@ -62,11 +69,11 @@ inoremap <C-space>b backgroundColor:<Space>Colors.
 inoremap <C-space>, <Space>,<Left>
 inoremap <C-space><C-,> <Right>,oo<Left><Left>
 
-" :on<cr>:tabn<cr>
-" nnoremap <silent> <Space>fr :FlutterRun<cr>
-" nnoremap <silent> <Space>ft :FlutterRestart<cr>
-" nnoremap <silent> <Space>fp :FlutterPubGet<cr>
-" nnoremap <silent> <Space>fq :FlutterQuit<cr>
+" FLUTTER
+nnoremap <silent> <Space>fr :FlutterRun<cr>
+nnoremap <silent> <Space>ft :FlutterRestart<cr>
+nnoremap <silent> <Space>fp :FlutterPubGet<cr>
+nnoremap <silent> <Space>fq :FlutterQuit<cr>
 
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
@@ -78,11 +85,7 @@ nnoremap <C-down> :resize -2<cr>
 nnoremap <C-left> :vertical resize -2<cr>
 nnoremap <C-right> :vertical resize +2<cr>
 
-"
-" nnoremap <Space>q :bdelete<cr>
 
-
-" remove word
 
 " Basic file system commands
 " nnoremap <A-o> :!touch<Space>
@@ -93,9 +96,7 @@ nnoremap <C-right> :vertical resize +2<cr>
 " fix p y
 nnoremap Y y$
 nnoremap V V$h
-" save and source this file if vim so% of lua lo%
 nnoremap <Space>w :w<cr>
-" fast exist in insert  mode
 inoremap <C-space><C-space> <esc>
 
 

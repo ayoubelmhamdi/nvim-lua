@@ -5,14 +5,26 @@
 " |____/|_____| |_|      \___/|_|    |_| |___\___/|_| \_|
                                                        
 
+lua << EOF
+vim.o.hidden = true
+vim.o.fileencoding = "utf-8"
+vim.o.termguicolors = true
+vim.o.splitbelow = true
+vim.o.splitright = true
+vim.o.conceallevel = 0 -- So that I can see `` in markdown files
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.o.backup = false
+vim.o.writebackup = false
+vim.wo.signcolumn = "yes"
+vim.o.clipboard = "unnamedplus"
 
-syntax on " -- syntax highlighting
-set iskeyword+=- "  -- treat dash separated words as a word text object"
-set shortmess+=c "  -- Don't pass messages to |ins-completion-menu|.
+-- 
+EOF
+syntax on "
 set inccommand=split " -- Make substitution work in realtime
-set whichwrap+=<,>,[,],h,l " -- move to next line with theses keys
-set ts=4 " -- Insert 4 spaces for a tab
-set sw=4 " -- Change the number of space characters inserted for indentation
+set ts=2 " -- Insert 4 spaces for a tab
+set sw=2 " -- Change the number of space characters inserted for indentation
 
 
 
@@ -23,24 +35,20 @@ set nowrap
 set autoindent
 set smartindent	
 
-set tabstop=4 
-set softtabstop=4
+set tabstop=2 
+set softtabstop=2
 set shiftwidth=2
 set expandtab
 set smarttab
 
 set backspace=indent,eol,start
-set colorcolumn=60
-set scrolloff=7
+set colorcolumn=92
+set scrolloff=4
 
-" set mouse=a
-set updatetime=300
-" Ignore these files when completing
+set mouse=a
+set updatetime=600
 set wildignore+=*.o,*.obj,.git,*.pyc
-set wildignore+=eggs/**
-set wildignore+=*.egg-info/**
 
-set directory=$HOME/.local/vim/dir/,.
 
 set noswapfile
 set nowritebackup
@@ -97,7 +105,7 @@ set undofile
 
 
 """""tow line for schow error
-""""set cmdheight=2
+set cmdheight=2
 """"" set endofline
 """"" set list
 """"" set listchars=tab:>-,eol:¶
