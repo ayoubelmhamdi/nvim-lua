@@ -34,6 +34,15 @@ nnoremap <Space>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <Space>fs :Telescope current_buffer_fuzzy_find<cr>
 nnoremap <Space>rs :Telescope session-lens  search_session<cr>
 
+" Hop
+nnoremap <C-s> :HopChar1<cr><cr>
+
+" Train
+nnoremap <Space>tl :TrainUpDown<cr>
+nnoremap <Space>tw :TrainWord<cr>
+nnoremap <Space>tt :TrainTextObj<cr>
+
+
 " delet last word/sentens/line it's work  if use save point bellow 
 " inoremap <C-u> <C-g>u<C-u>
 
@@ -108,10 +117,10 @@ vnoremap <C-s> y:s///g<Left><Left><Left><C-r>0<right>
 
 " Prevent x from overriding what's in the clipboard.
 " use this tow symbole "_ after motion, 
-xnoremap x "_x
-xnoremap X "_X
-xnoremap c "_c
-xnoremap C "_C
+snoremap x "_x
+snoremap X "_X
+snoremap c "_c
+snoremap C "_C
 
 vnoremap x "_x
 vnoremap X "_X
