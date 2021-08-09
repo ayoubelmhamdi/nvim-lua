@@ -1,4 +1,5 @@
 require('nvPlugins.packerPlugins')
+require('nvPlugins.globale')
 require('nvPlugins.telescope')
 --
 --
