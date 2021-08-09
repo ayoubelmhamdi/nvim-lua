@@ -76,6 +76,8 @@ function()
    use 'rmagatti/auto-session' -- save session layout
    use 'rmagatti/session-lens' -- save session layout with telescope
    use 'tpope/vim-fugitive'
+   use 'airblade/vim-rooter'
+   -- use 'ahmedkhalf/lsp-rooter.nvim' -- chaneg workin directory
    use 'tpope/vim-commentary'
    -- use 'lewis6991/spellsitter.nvim'
    use 'tjdevries/train.nvim'
