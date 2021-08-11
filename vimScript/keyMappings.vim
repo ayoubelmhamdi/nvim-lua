@@ -18,13 +18,25 @@ nnoremap <space>wa  <cmd>lua vim.lsp.buf.add_workspace_folder()<CR>
 nnoremap <space>wr  <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
 nnoremap <space>wl  <cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>
 nnoremap <space>D   <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap <space>e   <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
-nnoremap <space>q   <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <space>le   <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 
-nnoremap <Space>h   :set hlsearch!<cr>
-nnoremap <Space>e   :Lexplore<cr>
+nnoremap <silent> <space>ll <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <silent> <Space>lq <cmd>QFToggle!<CR>
+
+nnoremap <Esc>      :set hlsearch!<cr>
+nnoremap <Space>ee  :Lexplore<cr>
 nnoremap <Tab>      :bn<cr>
 nnoremap <S-Tab>    :bp<cr>
+
+
+
+
+" Compe_snip
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+inoremap <silent><expr> <C-Space> compe#complete()
 
 " Telescope:
 nnoremap <Space>o <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -35,7 +47,7 @@ nnoremap <Space>fs :Telescope current_buffer_fuzzy_find<cr>
 nnoremap <Space>rs :Telescope session-lens  search_session<cr>
 
 " Hop
-nnoremap <C-s> :HopChar1<cr><cr>
+nnoremap <C-s> :HopChar1<cr>
 
 " Train
 nnoremap <Space>tl :TrainUpDown<cr>

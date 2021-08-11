@@ -18,7 +18,10 @@ function()
 
 -- LSP+IDE
    use 'neovim/nvim-lspconfig'
+   -- use 'glepnir/lspsaga.nvim'
    use 'hrsh7th/nvim-compe'
+   use 'stevearc/qf_helper.nvim'
+   -- use 'nvim-treesitter/playground' -- treesitter view tags
 
    -- option 1 :vimscript
    -- use 'hrsh7th/vim-vsnip'
@@ -49,6 +52,7 @@ function()
    -- use 'SirVer/ultisnips'
 
    use 'akinsho/flutter-tools.nvim'
+   -- use 'dart-lang/dart-vim-plugin'
    -- use 'junegunn/fzf.vim'  -- write by vimScript languages
    use 'windwp/nvim-autopairs'
    use 'blackCauldron7/surround.nvim'
