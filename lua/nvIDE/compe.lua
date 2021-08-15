@@ -10,7 +10,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
 require'compe'.setup {
 
-  enabled = true; 
+  enabled = true;
   autocomplete = true;
   debug = false;
   min_length = 1;

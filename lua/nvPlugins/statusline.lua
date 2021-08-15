@@ -141,8 +141,8 @@ ins_left {
   color = {fg = colors.magenta}
 }
 
--- ins_left {'location'}
-
+ins_left {'g:time_total_string'}
+-- ins_left {'g:time_total'}
 -- ins_left {'progress', color = {fg = colors.fg}}
 
 ins_left {

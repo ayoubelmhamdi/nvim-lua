@@ -21,12 +21,10 @@ nnoremap <space>D   <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <space>le   <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 
 nnoremap <silent> <space>ll <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+" code_action /lock list
 nnoremap <silent> <Space>lq <cmd>QFToggle!<CR>
 
-nnoremap <Esc>      :set hlsearch!<cr>
-nnoremap <Space>ee  :Lexplore<cr>
-nnoremap <Tab>      :bn<cr>
-nnoremap <S-Tab>    :bp<cr>
+
 
 
 
@@ -47,7 +45,7 @@ nnoremap <Space>fs :Telescope current_buffer_fuzzy_find<cr>
 nnoremap <Space>rs :Telescope session-lens  search_session<cr>
 
 " Hop
-nnoremap <C-s> :HopChar1<cr>
+nnoremap <C-s> :HopChar2<cr>
 
 " Train
 nnoremap <Space>tl :TrainUpDown<cr>
@@ -65,7 +63,10 @@ nnoremap <Space>tt :TrainTextObj<cr>
 " inoremap ? ?<c-g>u
 " inoremap ! !<c-g>u
 
-
+nnoremap <Esc>      :set hlsearch!<cr>
+nnoremap <Space>ee  :Lexplore<cr>
+nnoremap <Tab>      :bn<cr>
+nnoremap <S-Tab>    :bp<cr>
 
 nnoremap n nzzzv
 nnoremap N Nzzzv

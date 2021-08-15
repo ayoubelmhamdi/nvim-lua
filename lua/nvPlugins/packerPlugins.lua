@@ -3,6 +3,9 @@
 local use = require('packer').use
 require('packer').startup(
 function()
+-- Testing:  
+
+
 -- Dependencies:
    use 'wbthomason/packer.nvim'
    use 'nvim-lua/popup.nvim'
@@ -18,42 +21,13 @@ function()
 
 -- LSP+IDE
    use 'neovim/nvim-lspconfig'
-   -- use 'glepnir/lspsaga.nvim'
    use 'hrsh7th/nvim-compe'
    use 'stevearc/qf_helper.nvim'
-   -- use 'nvim-treesitter/playground' -- treesitter view tags
 
-   -- option 1 :vimscript
-   -- use 'hrsh7th/vim-vsnip'
-   -- use 'hrsh7th/vim-vsnip-integ'
-   -- use 'uga-rosa/luasnip_open'
-   -- use "rafamadriz/friendly-snippets"
-   -- use 'Neevash/awesome-flutter-snippets'
-   -- use 'zyllus17/flutter-snippets'
-
-   -- option 2: lua
-   -- TODO: active lua snippets
-   -- use 'uga-rosa/luasnip_open'
    use 'L3MON4D3/LuaSnip'
    use "ayoubelmhamdi/friendly-snippets"
-   -- option 3: mix
-   -- engeen:
-   -- hrsh7th/vim-vsnip[vimScript], L3MON4D3/LuaSnip[lua], coc-snippets[vim-snippets]
-
-   -- <C-j/l> for flutter snippet
-   -- use 'Neevash/awesome-flutter-snippets'
-   -- use 'hrsh7th/vim-vsnip'
-   -- use 'hrsh7th/vim-vsnip-integ'
-
-   -- data sinippets
-   -- use "rafamadriz/friendly-snippets"
-   -- use 'honza/vim-snippets'
-   -- use 'mfussenegger/nvim-dap'
-   -- use 'SirVer/ultisnips'
 
    use 'akinsho/flutter-tools.nvim'
-   -- use 'dart-lang/dart-vim-plugin'
-   -- use 'junegunn/fzf.vim'  -- write by vimScript languages
    use 'windwp/nvim-autopairs'
    use 'blackCauldron7/surround.nvim'
 
@@ -61,18 +35,10 @@ function()
  -- theme+line
    use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
    use 'lukas-reineke/indent-blankline.nvim'
-   -- use {'morhetz/gruvbox'}
-   -- use {'tjdevries/colorbuddy.vim'}
-   -- use {'tjdevries/gruvbuddy.nvim'}
-
-   -- Tabline
-   -- use 'akinsho/nvim-bufferline.lua'
-   use 'romgrk/barbar.nvim'
-
-   -- Status line
+   use 'akinsho/nvim-bufferline.lua'
    use 'hoob3rt/lualine.nvim'
-   -- use 'kosayoda/nvim-lightbulb'
-   -- use 'beauwilliams/statusline.lua'
+   -- use 'romgrk/barbar.nvim'
+
 
 
 -- Misc
