@@ -1,23 +1,40 @@
-    
-let g:time_total = readfile("/opt/time-spend1",'',1)[0]
-let g:time_step  = 0
-let g:time_total_string=""
+let s:time_total  = 0
+let s:time_step   = 0
 augroup counter | au!
-    au InsertEnter * let g:time_step = localtime()
-    au InsertLeave * let g:time_total += localtime() - g:time_step
-    " au InsertLeave * let time_total_string = time_total .. "s"
-    au InsertLeave * let g:time_total_string = Time_ago(time_total)
-    au InsertLeave * :call writefile([g:time_total], "/opt/time-spend1", "b")
-    "  au InsertLeave * :echo g:time_total
+    au InsertEnter *.dart let s:time_total  = 0
+    au InsertEnter *.dart let s:time_step   = localtime()
+
+    au InsertLeave *.dart let s:time_total  = localtime() - s:time_step + readfile("/opt/time-spend1",'',1)[0]
+
+    au InsertLeave *.dart let g:time_total_string = Time_ago(s:time_total)
+    au InsertLeave *.dart :call writefile([s:time_total], "/opt/time-spend1", "b")
+
+    " au InsertLeave dart.dart :call writefile([WriteCondition(g:time_step,g:time_sort)], "/opt/time-spend1", "b")
+    "  au InsertLeave * :echo l:time_total
 augroup END
 
-function! Time_ago(agel)
-  let l:age = a:agel
+function! Time_ago(age)
+  let l:age = a:age
   let l:hours = l:age / 60 / 60 % 24
   let l:minutes = l:age / 60 % 60
   let l:seconds = l:age % 60
   " echo l:seconds
-  let l:time= l:hours .. ":" .. l:minutes .. ":" .. l:seconds
-  return l:time
+
+  if l:hours   <  10 | let hours   = "0" .. l:hours   | endif
+  if l:minutes <  10 | let minutes = "0" .. l:minutes | endif
+  if l:seconds <  10 | let seconds = "0" .. l:seconds | endif
+
+  return l:hours .. ":" .. l:minutes .. ":" .. l:seconds
 endfunction
-" call Time_ago(200)
+
+
+function! WriteCondition(start,end)
+  let l:start = a:start
+  let l:end   = a:end
+
+  let l:delta = l:end-l:start
+
+  if l:delta <  0  | return 0                     | endif
+  if l:delta > 200 | return l:start - l:time_open | endif
+  if l:delta < 200 | return l:end   - l:time_open | endif
+endfunction
