@@ -8,9 +8,6 @@ augroup counter | au!
 
     au InsertLeave *.dart let g:time_total_string = Time_ago(s:time_total)
     au InsertLeave *.dart :call writefile([s:time_total], "/opt/time-spend1", "b")
-
-    " au InsertLeave dart.dart :call writefile([WriteCondition(g:time_step,g:time_sort)], "/opt/time-spend1", "b")
-    "  au InsertLeave * :echo l:time_total
 augroup END
 
 function! Time_ago(age)

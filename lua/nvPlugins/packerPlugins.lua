@@ -15,7 +15,7 @@ function()
    use 'nvim-telescope/telescope.nvim'
    -- use 'nvim-telescope/telescope-frecency.nvim'
    use 'nvim-telescope/telescope-project.nvim'
-   use 'nvim-telescope/telescope-fzf-native.nvim'
+   -- use 'nvim-telescope/telescope-fzf-native.nvim'
    use 'kyazdani42/nvim-web-devicons'
    use 'tami5/sql.nvim'
 
