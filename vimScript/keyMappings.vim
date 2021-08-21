@@ -68,6 +68,10 @@ nnoremap <Space>ee  :Lexplore<cr>
 nnoremap <Tab>      :bn<cr>
 nnoremap <S-Tab>    :bp<cr>
 
+" add delay for `o` in norml mod 
+" for help `space` execute after `o` in <Space>o  
+nmap o o
+
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
