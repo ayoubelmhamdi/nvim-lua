@@ -2,7 +2,7 @@ require('bufferline').setup {
   options = {
     numbers = "none",-- "none" | "ordinal" | "buffer_id" | "both",
     number_style = { "none", "subscript" }, --"superscript" | "" | { "none", "subscript" }, -- buffer_id at index 1, ordinal at index 2
-    mappings =  true , --true | false,
+    -- mappings =  true , --true | false,
     close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"
     right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
     left_mouse_command = "buffer %d",    -- can be a string | function, see "Mouse actions"

@@ -11,7 +11,7 @@ vim.o.fileencoding = "utf-8"
 vim.o.termguicolors = true
 vim.o.splitbelow = true
 vim.o.splitright = true
-vim.o.conceallevel = 0 -- So that I can see `` in markdown files
+--vim.o.conceallevel = 0 -- So that I can see `` in markdown files
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.backup = false
@@ -21,7 +21,7 @@ vim.o.clipboard = "unnamedplus"
 
 -- 
 EOF
-syntax on "
+syntax on
 set inccommand=split " -- Make substitution work in realtime
 set ts=2 " -- Insert 4 spaces for a tab
 set sw=2 " -- Change the number of space characters inserted for indentation
