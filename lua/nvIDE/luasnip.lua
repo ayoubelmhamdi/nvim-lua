@@ -1,4 +1,5 @@
-
+-- make snippet change whe add any char
+require'luasnip'.config.setup({updateevents="TextChangedI" })
 
 
 local t = function(str) 
