@@ -25,7 +25,7 @@ function()
    use 'stevearc/qf_helper.nvim'
 
    use 'L3MON4D3/LuaSnip'
-   use "ayoubelmhamdi/friendly-snippets"
+   -- use "ayoubelmhamdi/friendly-snippets"
 
    use 'akinsho/flutter-tools.nvim'
    use 'windwp/nvim-autopairs'

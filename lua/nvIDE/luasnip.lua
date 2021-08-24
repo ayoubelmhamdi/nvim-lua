@@ -1,6 +1,10 @@
 -- make snippet change whe add any char
-require'luasnip'.config.setup({updateevents="TextChangedI" })
-
+-- know i'm disable because TextChangedI make text write randomly on screen
+-- require'luasnip'.config.setup({updateevents="TextChangedI" })
+-- load vs code snippet
+-- must loaded after luasnip call snippet
+vim.cmd('set rtp+=/projects/lua/friendly-snippets')
+require('luasnip.loaders.from_vscode').load()
 
 local t = function(str) 
     return vim.api.nvim_replace_termcodes(str, true, true, true)

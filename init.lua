@@ -7,11 +7,10 @@ require('nvSettings')
 require('nvLSP')
 require('nvIDE')
 require('nvTheme')
-require('luasnip.loaders.from_vscode').load()
+--require('luasnip.loaders.from_vscode').load()
 
 
 -- config in vimScript
 vim.cmd('source ~/.config/nvim/vimScript/init.vim')
 vim.cmd('echo reltimestr(reltime(startvim))') -- end chrono
-
 
