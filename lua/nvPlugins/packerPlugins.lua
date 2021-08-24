@@ -1,5 +1,6 @@
 
 
+
 local use = require('packer').use
 require('packer').startup(
 function()
@@ -64,7 +65,7 @@ end)
 
 
 
-vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
+vim.cmd([[autocmd BufWritePost packerPlugins.lua source <afile> | PackerCompile]])
 
 
 
