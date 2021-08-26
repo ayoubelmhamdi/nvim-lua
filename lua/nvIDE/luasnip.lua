@@ -4,7 +4,13 @@
 -- load vs code snippet
 -- must loaded after luasnip call snippet
 vim.cmd('set rtp+=/projects/lua/friendly-snippets')
-require('luasnip.loaders.from_vscode').load()
+-- require('luasnip.loaders.from_vscode').load()
+-- snippets/flutter.json
+
+vim.cmd([[
+        autocmd BufWritePost *.json lua require("luasnip").snippets={}
+        autocmd BufWritePost *.json lua require("luasnip.loaders.from_vscode").load()
+]])
 
 local t = function(str) 
     return vim.api.nvim_replace_termcodes(str, true, true, true)

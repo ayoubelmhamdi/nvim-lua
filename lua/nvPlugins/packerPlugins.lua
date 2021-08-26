@@ -54,6 +54,7 @@ function()
    use 'tjdevries/train.nvim'
    use 'phaazon/hop.nvim'
    use "folke/todo-comments.nvim"
+   use 'ellisonleao/glow.nvim'
    -- REGISTRE
    --use 'gennaro-tedesco/nvim-peekup'
    --Or

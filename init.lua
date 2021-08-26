@@ -1,4 +1,5 @@
 vim.cmd('let startvim = reltime()') -- start chrono
+
 -- INIT NVIM 
 
 

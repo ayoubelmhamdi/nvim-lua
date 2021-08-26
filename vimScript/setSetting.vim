@@ -59,7 +59,8 @@ set nobackup
 set undodir+=$HOME/.local/vim/undodir
 set undofile
 
-
+set shada='10000,n/mega/repo/dotfiles/myshada
+set autoread  "--autoUpdate if <c-z> and ioen in anather place
 
 """""dis now
 """"" set foldmethod=manual
@@ -73,7 +74,6 @@ set undofile
 
 
 
-""""set autoread
 """"set complete+=kspell
 """"set formatoptions=cro
 """"set go=a
