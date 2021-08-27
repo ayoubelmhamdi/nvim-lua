@@ -71,6 +71,9 @@ nnoremap <S-Tab>    :bp<cr>
 " add delay for `o` in norml mod 
 " for help `space` execute after `o` in <Space>o  
 nmap o o
+vnoremap <Space>i <Esc>i
+vnoremap <Space>a <Esc>a
+
 
 nnoremap n nzzzv
 nnoremap N Nzzzv

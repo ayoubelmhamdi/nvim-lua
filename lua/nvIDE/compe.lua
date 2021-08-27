@@ -33,7 +33,7 @@ require'compe'.setup {
 
   source = {
     path       = {kind = "  "},
-    buffer     = {kind = "  ",priority = 800},
+    buffer     = {kind = "  ",priority = 400},
     calc       = {kind = "  "},
     nvim_lsp   = {kind = "  ",priority = 800},
     nvim_lua   = {kind = "  "};

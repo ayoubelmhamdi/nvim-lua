@@ -13,5 +13,6 @@ require('nvTheme')
 
 -- config in vimScript
 vim.cmd('source ~/.config/nvim/vimScript/init.vim')
+vim.cmd('autocmd TermOpen * startinsert') -- for use fzf on term
 vim.cmd('echo reltimestr(reltime(startvim))') -- end chrono
 

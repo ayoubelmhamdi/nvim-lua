@@ -27,15 +27,11 @@ set ts=2 " -- Insert 4 spaces for a tab
 set sw=2 " -- Change the number of space characters inserted for indentation
 
 
-
-
-
-
-set nowrap 
+set nowrap
 set autoindent
-set smartindent	
+set smartindent
 
-set tabstop=2 
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
@@ -60,7 +56,8 @@ set undodir+=$HOME/.local/vim/undodir
 set undofile
 
 set shada='10000,n/mega/repo/dotfiles/myshada
-set autoread  "--autoUpdate if <c-z> and ioen in anather place
+set autoread
+set nohlsearch
 
 """""dis now
 """"" set foldmethod=manual

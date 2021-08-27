@@ -14,6 +14,8 @@ function()
    use 'ojroques/nvim-lspfuzzy'
    use 'nvim-treesitter/nvim-treesitter'
    use 'nvim-telescope/telescope.nvim'
+   use 'sudormrfbin/cheatsheet.nvim'
+   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
    -- use 'nvim-telescope/telescope-frecency.nvim'
    use 'nvim-telescope/telescope-project.nvim'
    -- use 'nvim-telescope/telescope-fzf-native.nvim'
@@ -54,7 +56,7 @@ function()
    use 'tjdevries/train.nvim'
    use 'phaazon/hop.nvim'
    use "folke/todo-comments.nvim"
-   use 'ellisonleao/glow.nvim'
+   use {"ellisonleao/glow.nvim", run = "GlowInstall"}
    -- REGISTRE
    --use 'gennaro-tedesco/nvim-peekup'
    --Or
