@@ -1,7 +1,7 @@
 vim.cmd('let startvim = reltime()') -- start chrono
 
 -- INIT NVIM 
-
+require('impatient')
 
 require('nvPlugins')
 require('nvSettings')
@@ -13,6 +13,6 @@ require('nvTheme')
 
 -- config in vimScript
 vim.cmd('source ~/.config/nvim/vimScript/init.vim')
-vim.cmd('autocmd TermOpen * startinsert') -- for use fzf on term
+-- vim.cmd('autocmd TermOpen * startinsert') -- for use fzf on term
 vim.cmd('echo reltimestr(reltime(startvim))') -- end chrono
 

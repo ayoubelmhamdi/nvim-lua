@@ -16,11 +16,10 @@ function()
    use 'nvim-telescope/telescope.nvim'
    use 'sudormrfbin/cheatsheet.nvim'
    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-   -- use 'nvim-telescope/telescope-frecency.nvim'
-   use 'nvim-telescope/telescope-project.nvim'
-   -- use 'nvim-telescope/telescope-fzf-native.nvim'
+   use 'nvim-telescope/telescope-frecency.nvim'
    use 'kyazdani42/nvim-web-devicons'
    use 'tami5/sql.nvim'
+   -- use 'nvim-telescope/telescope-project.nvim'
 
 -- LSP+IDE
    use 'neovim/nvim-lspconfig'
@@ -56,7 +55,9 @@ function()
    use 'tjdevries/train.nvim'
    use 'phaazon/hop.nvim'
    use "folke/todo-comments.nvim"
-   use {"ellisonleao/glow.nvim", run = "GlowInstall"}
+   -- startup imprevment to be speed
+   use {'lewis6991/impatient.nvim', rocks = 'mpack'}
+   -- use {"ellisonleao/glow.nvim", run = "GlowInstall"}
    -- REGISTRE
    --use 'gennaro-tedesco/nvim-peekup'
    --Or

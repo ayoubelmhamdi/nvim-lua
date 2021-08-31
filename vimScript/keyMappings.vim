@@ -23,6 +23,9 @@ nnoremap <space>le   <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 nnoremap <silent> <space>ll <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 " code_action /lock list
 nnoremap <silent> <Space>lq <cmd>QFToggle!<CR>
+" glow preview
+
+nnoremap <M-m> <cmd>lua require('nvPlugins.mytelescope').gl()<cr>
 
 
 
@@ -37,7 +40,7 @@ inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 inoremap <silent><expr> <C-Space> compe#complete()
 
 " Telescope:
-nnoremap <Space>o <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <Space>o :Telescope frecency<cr>
 nnoremap <Space>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <Space>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <Space>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
@@ -85,7 +88,7 @@ function! Quitwindows()
       exit! 
       echo "vide"
     else
-      bw
+      bw!
     endif
 endfunction
 nnoremap <silent> <Space>q :call Quitwindows()<cr>
@@ -184,7 +187,12 @@ autocmd BufNewFile,BufRead requirements*.txt set syntax=python
 " Move 1 more lines up or down in normal and visual selection modes.
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
-inoremap <C-space>k <C-o>:m .-2<CR>
-inoremap <C-space>j <C-o>:m .+1<CR>
-nnoremap <Space>k :m .-2<CR>==
-nnoremap <Space>j :m .+1<CR>==
+" inoremap <C-space>k <C-o>:m .-2<CR>
+" inoremap <C-space>j <C-o>:m .+1<CR>
+" nnoremap <Space>k :m .-2<CR>==
+" nnoremap <Space>j :m .+1<CR>==
+" nnoremap <Space>m :m .+==<Left><Left>
+
+"Lets me select moving by number.
+nnoremap <Space>k :m .-2==<Left><Left>
+nnoremap <Space>j :m .+1==<Left><Left>
