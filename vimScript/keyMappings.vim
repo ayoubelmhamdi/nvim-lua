@@ -200,7 +200,7 @@ nnoremap <Space>k :m .-2==<Left><Left>
 nnoremap <Space>j :m .+1==<Left><Left>
 
 " Command 
-command! Telescopefindfiledart lua require("telescope.builtin").find_files({find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","*.png","-E","*.jpg","-E","*.md"}})<cr>
+command! Telescopefindfiledart lua require("telescope.builtin").find_files({find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","build","-E","web","-E","linux","-E","*.png","-E","*.jpg","-E","*.md"}})
 command! Psync PackerSync
 command! Pinstall PackerInstall
 command! Pclean PackerClean

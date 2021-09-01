@@ -2,20 +2,28 @@ vim.cmd([[autocmd BufWritePost mytelescope.lua source <afile>]])
 
 
 
+
 local action_state = require('telescope.actions.state')
 require('telescope').setup{
     defaults ={
-        -- find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","*.png","-E","*.jpg","-E","*.md"},
         prompt_prefix = " ",
         selection_caret = " ",
         file_sorter =  require'telescope.sorters'.get_fuzzy_file,
+        sorting_strategy = "ascending",
+        layout_strategy = "horizontal",
         layout_config = {
-          prompt_position = "top",
-          horizontal = {mirror = false},
-          vertical = {mirror = false},
-          --width = 0.75,
-          --preview_cutoff = 120,
+          prompt_position="top",
+          height = 0.90,
+          width  = 0.90,
+          preview_width = 0.70,
         },
+        --layout_config = {
+        --  prompt_position = "top",
+        --  horizontal = {mirror = false},
+        --  vertical = {mirror = false},
+        --  --width = 0.75,
+        --  --preview_cutoff = 120,
+        --},
         -- layout_config = {
         --   prompt_position="top"
         -- },
@@ -135,6 +143,17 @@ M.gl = function()
           end) -- end replace function
       return true -- attach_mappings return true
       end, -- end attach_mappings
+  }
+end
+
+M.gf = function ()
+  return require("telescope.builtin").fd {
+    require"telescope.themes".get_dropdown {
+      winblend = 8,
+      previewer = false,
+      results_height = 30,
+      width = 90
+    },
   }
 end
 
