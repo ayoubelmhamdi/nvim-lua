@@ -1,5 +1,7 @@
 vim.cmd([[autocmd BufWritePost mytelescope.lua source <afile>]])
-local a = require"telescope".load_extension("frecency")
+
+
+
 local action_state = require('telescope.actions.state')
 require('telescope').setup{
     defaults ={
@@ -23,6 +25,12 @@ require('telescope').setup{
         },
     },
      extensions = {
+       fzf = {
+          fuzzy = true,                    -- false will only do exact matching
+          override_generic_sorter = false, -- override the generic sorter
+          override_file_sorter = true,     -- override the file sorter
+          case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+          },
        frecency = {
           db_root = "/mega/repo/dotfiles/telescope-frency",
           show_scores = true,
@@ -31,7 +39,7 @@ require('telescope').setup{
             "*.git/*",
             "*/tmp/*",
             "*/lua-language-server/*",
-            "~/.local/share/nvim/*",
+            "*/.local/share/*",
             "/[^mega,root,home,opt,projects]*/*",
           },
           disable_devicons = false,
@@ -126,4 +134,5 @@ M.gl = function()
   }
 end
 
+require"telescope".load_extension("fzf")
 return M

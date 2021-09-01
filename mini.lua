@@ -60,9 +60,10 @@ snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 --function()
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
+  use 'machakann/vim-textobj-functioncall'
   use 'hrsh7th/nvim-compe'
   use 'L3MON4D3/LuaSnip'
-  use 'rafamadriz/friendly-snippets'
+  -- use 'rafamadriz/friendly-snippets'
 
 end)
 

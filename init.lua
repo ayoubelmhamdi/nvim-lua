@@ -10,7 +10,9 @@ require('nvIDE')
 require('nvTheme')
 --require('luasnip.loaders.from_vscode').load()
 
+vim.cmd([[
 
+]])
 -- config in vimScript
 vim.cmd('source ~/.config/nvim/vimScript/init.vim')
 -- vim.cmd('autocmd TermOpen * startinsert') -- for use fzf on term

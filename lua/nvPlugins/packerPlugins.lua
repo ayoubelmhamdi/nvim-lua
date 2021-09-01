@@ -13,10 +13,11 @@ function()
    use 'nvim-lua/plenary.nvim'
    use 'ojroques/nvim-lspfuzzy'
    use 'nvim-treesitter/nvim-treesitter'
+   use 'nvim-treesitter/playground' --viewer
    use 'nvim-telescope/telescope.nvim'
    use 'sudormrfbin/cheatsheet.nvim'
    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-   use 'nvim-telescope/telescope-frecency.nvim'
+   use {'nvim-telescope/telescope-frecency.nvim',   config = function() require"telescope".load_extension("frecency") end}
    use 'kyazdani42/nvim-web-devicons'
    use 'tami5/sql.nvim'
    -- use 'nvim-telescope/telescope-project.nvim'
@@ -57,12 +58,12 @@ function()
    use "folke/todo-comments.nvim"
    -- startup imprevment to be speed
    use {'lewis6991/impatient.nvim', rocks = 'mpack'}
-   -- use {"ellisonleao/glow.nvim", run = "GlowInstall"}
-   -- REGISTRE
-   --use 'gennaro-tedesco/nvim-peekup'
-   --Or
-   --use "tversteeg/registers.nvim"
-
+   -- select funcion
+   use 'kana/vim-textobj-user'
+   use 'kana/vim-textobj-function'
+   use 'kamichidu/vim-textobj-function-go'
+   use 'thinca/vim-textobj-function-javascript'
+   -- use 'haya14busa/vim-textobj-function-syntax' " work with go bat not perfect
 
 
 end)
