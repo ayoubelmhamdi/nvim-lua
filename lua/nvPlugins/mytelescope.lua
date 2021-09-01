@@ -5,16 +5,20 @@ vim.cmd([[autocmd BufWritePost mytelescope.lua source <afile>]])
 local action_state = require('telescope.actions.state')
 require('telescope').setup{
     defaults ={
-        prompt_prefix ="$$ ",
-        extensions = {
-            fzf = {
-              fuzzy = true,                    -- false will only do exact matching
-              override_generic_sorter = false, -- override the generic sorter
-              override_file_sorter = true,     -- override the file sorter
-              case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-              },
-           
+        -- find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","*.png","-E","*.jpg","-E","*.md"},
+        prompt_prefix = " ",
+        selection_caret = " ",
+        file_sorter =  require'telescope.sorters'.get_fuzzy_file,
+        layout_config = {
+          prompt_position = "top",
+          horizontal = {mirror = false},
+          vertical = {mirror = false},
+          --width = 0.75,
+          --preview_cutoff = 120,
         },
+        -- layout_config = {
+        --   prompt_position="top"
+        -- },
         mappings = {
             i = {
                 ["<c-a>"]= function ()
@@ -128,9 +132,9 @@ M.gl = function()
               elseif cmd == "vertical" then
                 vim.cmd("vs | term glow /mega/repo/" .. selection.value)
               end
-          end)
-      return true
-      end,
+          end) -- end replace function
+      return true -- attach_mappings return true
+      end, -- end attach_mappings
   }
 end
 
