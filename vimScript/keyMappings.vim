@@ -42,7 +42,7 @@ inoremap <silent><expr> <C-Space> compe#complete()
 " Telescope:
 nnoremap <Space>o :Telescope frecency<cr>
 " find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","*.png","-E","*.jpg","-E","*.md"}, require("telescope.builtin").find_files({find_command = {"fd", --type","f","-E","*.lua"}
-autocmd FileType dart nnoremap <Space>o :lua require("telescope.builtin").find_files({find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","*.png","-E","*.jpg","-E","*.md"}})<cr>
+autocmd FileType dart nnoremap <Space>o :Telescopefindfiledart<cr>
 nnoremap <Space>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <Space>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <Space>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
@@ -198,3 +198,9 @@ vnoremap J :m '>+1<CR>gv=gv
 "Lets me select moving by number.
 nnoremap <Space>k :m .-2==<Left><Left>
 nnoremap <Space>j :m .+1==<Left><Left>
+
+" Command 
+command! Telescopefindfiledart lua require("telescope.builtin").find_files({find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","*.png","-E","*.jpg","-E","*.md"}})<cr>
+command! Psync PackerSync
+command! Pinstall PackerInstall
+command! Pclean PackerClean
