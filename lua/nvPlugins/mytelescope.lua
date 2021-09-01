@@ -1,4 +1,4 @@
-vim.cmd([[autocmd BufWritePost mytelescope.lua source <afile>]])
+-- vim.cmd([[autocmd BufWritePost mytelescope.lua luafile%]])
 
 
 
@@ -15,7 +15,7 @@ require('telescope').setup{
           prompt_position="top",
           height = 0.90,
           width  = 0.90,
-          preview_width = 0.70,
+          preview_width = 0.60,
         },
         --layout_config = {
         --  prompt_position = "top",
@@ -45,8 +45,8 @@ require('telescope').setup{
           },
        frecency = {
           db_root = "/mega/repo/dotfiles/telescope-frency",
-          show_scores = true,
-          show_unindexed = true,
+          show_scores = false,
+          show_unindexed = false,
           ignore_patterns = {
             "*.git/*",
             "*/tmp/*",
@@ -66,38 +66,17 @@ require('telescope').setup{
 }
 
 
--- To get fzf loaded and working with telescope, you need to call
--- load_extension, somewhere after setup function:
-require('telescope').load_extension('fzf')
-
 -- test reload telescpe
-local RELOAD = require('plenary.reload').reload_module
 
-local should_reload = true
-
+-- return functions
 local M = {}
+
 M.reloader = function()
-  if should_reload then
+  local RELOAD = require('plenary.reload').reload_module
     RELOAD('plenary')
     RELOAD('popup')
     RELOAD('telescope')
-  end
 end
-
-M.first = function ()
-  local opt= require('telescope.themes').get_ivy({
-          sorting_strategy="ascending"
-        })
-  require('telescope.builtin').current_buffer_fuzzy_find(opt)
-end
-
--- function M.grep_prompt()
---   require("telescope.builtin").grep_string {
---     path_display = { "shorten" },
---     -- search = vim.fn.input "Rg ",
---     search = vim.fn.input "Rg> ",
---   }
--- end
 
 -- function M.find_files()
 --   require("telescope.builtin").find_files {
@@ -113,13 +92,12 @@ end
 --     layout_config = { preview_width = 0.65, width = 0.75 },
 --   }
 -- end
-local action_set = require "telescope.actions.set"
-local actions = require "telescope.actions"
-local previewers = require('telescope.previewers')
 
--- M.first = function ()
+
 M.gl = function()
-
+  local action_set = require "telescope.actions.set"
+  local actions = require "telescope.actions"
+  local previewers = require('telescope.previewers')
   return require'telescope.builtin'.fd {
       prompt_title = "|> ::foonv:: <|",
       shorten_path = false,
@@ -158,7 +136,7 @@ M.gf = function ()
 end
 
 -- must require after telescope config
--- if load before/ba3da telescope config 
+-- if load before/ba3da telescope config
 -- this plugin not detected by telecsope correctly
 -- so i cant't use ignore file or use smaret case ...
 require"telescope".load_extension("fzf")
