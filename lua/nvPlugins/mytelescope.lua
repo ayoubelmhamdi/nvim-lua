@@ -134,5 +134,10 @@ M.gl = function()
   }
 end
 
+-- must require after telescope config
+-- if load before/ba3da telescope config 
+-- this plugin not detected by telecsope correctly
+-- so i cant't use ignore file or use smaret case ...
 require"telescope".load_extension("fzf")
+require"telescope".load_extension("frecency")
 return M

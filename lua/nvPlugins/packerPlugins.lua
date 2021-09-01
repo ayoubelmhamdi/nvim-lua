@@ -17,7 +17,7 @@ function()
    use 'nvim-telescope/telescope.nvim'
    use 'sudormrfbin/cheatsheet.nvim'
    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-   use {'nvim-telescope/telescope-frecency.nvim',   config = function() require"telescope".load_extension("frecency") end}
+   use 'nvim-telescope/telescope-frecency.nvim'
    use 'kyazdani42/nvim-web-devicons'
    use 'tami5/sql.nvim'
    -- use 'nvim-telescope/telescope-project.nvim'
