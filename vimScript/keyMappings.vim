@@ -40,7 +40,7 @@ inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 inoremap <silent><expr> <C-Space> compe#complete()
 
 " Telescope:
-nnoremap <Space>o :Telescope frecency<cr>
+nnoremap <Space>o :Telescopefy<cr>
 " find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","*.png","-E","*.jpg","-E","*.md"}, require("telescope.builtin").find_files({find_command = {"fd", --type","f","-E","*.lua"}
 autocmd FileType dart nnoremap <Space>o :Telescopefindfiledart<cr>
 nnoremap <Space>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
@@ -204,3 +204,5 @@ command! Telescopefindfiledart lua require("telescope.builtin").find_files({find
 command! Psync PackerSync
 command! Pinstall PackerInstall
 command! Pclean PackerClean
+command! Telescopefy Telescope frecency default_text=:CWD: 
+command! Reloader lua require('nvPlugins.mytelescope').reloader()

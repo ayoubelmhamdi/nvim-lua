@@ -1,14 +1,12 @@
 -- vim.cmd([[autocmd BufWritePost mytelescope.lua luafile%]])
-
-
-
+-- aa bb cc
+-- aabbaa  1 bb2 3cc 4aa
 
 local action_state = require('telescope.actions.state')
 require('telescope').setup{
     defaults ={
         prompt_prefix = " ",
         selection_caret = " ",
-        file_sorter =  require'telescope.sorters'.get_fuzzy_file,
         sorting_strategy = "ascending",
         layout_strategy = "horizontal",
         layout_config = {
@@ -55,15 +53,38 @@ require('telescope').setup{
             "/[^mega,root,home,opt,projects]*/*",
           },
           disable_devicons = false,
-          workspaces = {
-            ["conf"]    = "~/.config",
-            ["nvim"]    = "~/.config/nvim",
-            ["project"] = "/projects",
-            ["wiki"]    = "/mega/repo",
-            }
+          -- workspaces = {
+          --   ["conf"]    = "~/.config",
+          --   ["nvim"]    = "~/.config/nvim",
+          --   ["project"] = "/projects",
+          --   ["wiki"]    = "/mega/repo",
+          --   }
           },
       }
 }
+-- clipboard 
+require('neoclip').setup({
+      history = 1000,
+      filter = nil,
+      preview = false,
+      default_register = '"',
+      content_spec_column = false,
+      on_paste = {
+        set_reg = false,
+      },
+      keys = {
+        i = {
+          select = '<c-k>',
+          paste = '<cr>',
+          paste_behind = '<c-p>',
+        },
+        n = {
+          select = '<cr>',
+          paste = 'p',
+          paste_behind = 'P',
+        },
+      },
+})
 
 
 -- test reload telescpe
@@ -141,4 +162,5 @@ end
 -- so i cant't use ignore file or use smaret case ...
 require"telescope".load_extension("fzf")
 require"telescope".load_extension("frecency")
+require('telescope').load_extension('neoclip')
 return M

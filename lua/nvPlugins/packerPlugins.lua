@@ -63,8 +63,8 @@ function()
    use 'kana/vim-textobj-function'
    use 'kamichidu/vim-textobj-function-go'
    use 'thinca/vim-textobj-function-javascript'
-   -- use 'haya14busa/vim-textobj-function-syntax' " work with go bat not perfect
-
+   -- clipboard
+    use 'AckslD/nvim-neoclip.lua'
 
 end)
 
