@@ -57,6 +57,11 @@ nnoremap <Space>tl :TrainUpDown<cr>
 nnoremap <Space>tw :TrainWord<cr>
 nnoremap <Space>tt :TrainTextObj<cr>
 
+" select function
+" xnoremap iu :lua require"treesitter-unit".select()<CR>
+" xnoremap au :lua require"treesitter-unit".select(true)<CR>
+" onoremap iu :<c-u>lua require"treesitter-unit".select()<CR>
+" onoremap au :<c-u>lua require"treesitter-unit".select(true)<CR>
 
 " delet last word/sentens/line it's work  if use save point bellow 
 " inoremap <C-u> <C-g>u<C-u>
@@ -201,8 +206,8 @@ nnoremap <Space>j :m .+1==<Left><Left>
 
 " Command 
 command! Telescopefindfiledart lua require("telescope.builtin").find_files({find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","build","-E","web","-E","linux","-E","*.png","-E","*.jpg","-E","*.md"}})
-command! Psync PackerSync
-command! Pinstall PackerInstall
-command! Pclean PackerClean
+" command! Psync PackerSync
+" command! Pinstall PackerInstall
+" command! Pclean PackerClean
 command! Telescopefy Telescope frecency default_text=:CWD: 
 command! Reloader lua require('nvPlugins.mytelescope').reloader()

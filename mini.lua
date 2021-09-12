@@ -54,15 +54,25 @@ inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
 snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
 snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 
+
+
+
+
+xnoremap iu :lua require"treesitter-unit".select()<CR>
+xnoremap au :lua require"treesitter-unit".select(true)<CR>
+onoremap iu :<c-u>lua require"treesitter-unit".select()<CR>
+onoremap au :<c-u>lua require"treesitter-unit".select(true)<CR>
+
 ]]) 
 --local use = require('packer').use
 --require('packer').startup(
 --function()
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  use 'machakann/vim-textobj-functioncall'
   use 'hrsh7th/nvim-compe'
   use 'L3MON4D3/LuaSnip'
+  use 'nvim-treesitter/nvim-treesitter'
+  use 'David-Kunz/treesitter-unit'
   -- use 'rafamadriz/friendly-snippets'
 
 end)

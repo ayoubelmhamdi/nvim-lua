@@ -1,6 +1,4 @@
 
-
-
 local use = require('packer').use
 require('packer').startup(
 function()
@@ -59,12 +57,19 @@ function()
    -- startup imprevment to be speed
    use {'lewis6991/impatient.nvim', rocks = 'mpack'}
    -- select funcion
-   use 'kana/vim-textobj-user'
-   use 'kana/vim-textobj-function'
-   use 'kamichidu/vim-textobj-function-go'
-   use 'thinca/vim-textobj-function-javascript'
+   -- by treesitter
+   use 'David-Kunz/treesitter-unit'
+   -- by vimscript
+   -- use 'kana/vim-textobj-user'
+   -- use 'kamichidu/vim-textobj-function-go'
+   -- use 'thinca/vim-textobj-function-javascript'
    -- clipboard
-    use 'AckslD/nvim-neoclip.lua'
+   use 'AckslD/nvim-neoclip.lua'
+   -- markdown glow
+   use 'ellisonleao/glow.nvim'
+
+   -- static config
+   use 'static-nvim/mkdir'
 
 end)
 
