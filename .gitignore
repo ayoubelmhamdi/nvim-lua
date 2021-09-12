@@ -14,9 +14,6 @@ wiki/
 pack/
 utils/java/*
 utils/lombok.jar
-
-LunarVim/
-ls/
 plugin/
 lua-language-server/
 plugin/
