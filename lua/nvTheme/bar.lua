@@ -1,4 +1,4 @@
-require('bufferline').setup {
+-- require('bufferline').setup {
   -- options = {
   --   numbers = "none",-- "none" | "ordinal" | "buffer_id" | "both",
   --   number_style = { "none", "subscript" }, --"superscript" | "" | { "none", "subscript" }, -- buffer_id at index 1, ordinal at index 2
@@ -62,9 +62,9 @@ require('bufferline').setup {
   --   always_show_bufferline =  true, -- true | false,
   --   sort_by = 'id' , -- id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | Buffab(buffer_a: table, buffer_b: table)
   -- }
-}
+-- }
 
-function Buffab (buffer_a, buffer_b)
-      -- add custom logic
-      return buffer_a.modified > buffer_b.modified
-end
+-- function Buffab (buffer_a, buffer_b)
+--       -- add custom logic
+--       return buffer_a.modified > buffer_b.modified
+-- end

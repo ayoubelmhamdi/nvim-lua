@@ -1,25 +1,15 @@
-dein
-tags*
-.netrwhist
-pythonpath.vim/
-nodepath.vim/
-pythonpath.vim
-nodepath.vim
-autoload/plugged/*
-vimspector-config/gadgets/*
-paths.vim
-paths.vim/
-session/
-wiki/
-pack/
-utils/java/*
-utils/lombok.jar
-plugin/
+
+# lsp
 lua-language-server/
+
+# plugin
+pack/
 plugin/
-chris-lsp/
-remove.lua
-py.py
-lua.lua
+plugins/
+
+# test file
 dart.dart
 js.js
+lua.lua
+lua.lua
+py.py
