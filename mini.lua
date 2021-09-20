@@ -1,6 +1,7 @@
 
 vim.cmd([[
 autocmd BufWritePost mini.lua source <afile> | PackerCompile
+set pp+=$mini_nvim/plugins
 set mouse=a
 set clipboard=unnamedplus
 set nowrap 
@@ -63,18 +64,23 @@ xnoremap au :lua require"treesitter-unit".select(true)<CR>
 onoremap iu :<c-u>lua require"treesitter-unit".select()<CR>
 onoremap au :<c-u>lua require"treesitter-unit".select(true)<CR>
 
-]]) 
---local use = require('packer').use
---require('packer').startup(
---function()
+]])
+
+-- packer
+local nvim_name = vim.fn.expand('$mini_nvim')
+require('packer').init {
+    package_root = nvim_name .. '/plugins/pack',
+    max_jobs = 7,
+    git = {
+        clone_timeout = 3600, -- Timeout, in seconds, for git clones
+    },
+}
+
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'hrsh7th/nvim-compe'
   use 'L3MON4D3/LuaSnip'
   use 'nvim-treesitter/nvim-treesitter'
-  use 'David-Kunz/treesitter-unit'
-  -- use 'rafamadriz/friendly-snippets'
-
 end)
 
 

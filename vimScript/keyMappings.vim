@@ -25,7 +25,6 @@ nnoremap <silent> <space>ll <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 nnoremap <silent> <Space>lq <cmd>QFToggle!<CR>
 " glow preview
 
-nnoremap <M-m> <cmd>lua require('nvPlugins.mytelescope').gl()<cr>
 
 
 
@@ -40,14 +39,15 @@ inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 inoremap <silent><expr> <C-Space> compe#complete()
 
 " Telescope:
-nnoremap <Space>o :Telescopefy<cr>
-" find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","*.png","-E","*.jpg","-E","*.md"}, require("telescope.builtin").find_files({find_command = {"fd", --type","f","-E","*.lua"}
 autocmd FileType dart nnoremap <Space>o :Telescopefindfiledart<cr>
-nnoremap <Space>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <Space>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <Space>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-nnoremap <Space>fs :Telescope current_buffer_fuzzy_find<cr>
-nnoremap <Space>rs :Telescope session-lens  search_session<cr>
+nnoremap     <M-m>    <cmd>lua require('nvPlugins.mytelescope').gl()<cr>
+nnoremap <Space>o     :Telescopefy<cr>
+nnoremap <Space>fg    <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <Space>ff    :Telescope find_files<cr>
+nnoremap <Space>fb    <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <Space>fh    <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <Space>fs    :Telescope current_buffer_fuzzy_find<cr>
+nnoremap <Space>rs    :Telescope session-lens  search_session<cr>
 
 " Hop
 nnoremap <C-s> :HopChar2<cr>
@@ -73,16 +73,19 @@ nnoremap <Space>tt :TrainTextObj<cr>
 " inoremap ? ?<c-g>u
 " inoremap ! !<c-g>u
 
-nnoremap <Esc>      :set hlsearch!<cr>
+nnoremap <Esc>      :set nohlsearch<cr>
 nnoremap <Space>ee  :Lexplore<cr>
 nnoremap <Tab>      :bn<cr>
 nnoremap <S-Tab>    :bp<cr>
 
+" simple clear text
+vnoremap <BS> di
+
 " add delay for `o` in norml mod 
 " for help `space` execute after `o` in <Space>o  
 nmap o o
-vnoremap <Space>i <Esc>i
-vnoremap <Space>a <Esc>a
+" vnoremap <Space>i <Esc>i
+" vnoremap <Space>a <Esc>a
 
 
 nnoremap n nzzzv

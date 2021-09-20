@@ -1,17 +1,16 @@
 
-local packer = require('packer')
--- local util = require('packer.util')
 
-packer.init {
-    -- package_root = util.join_paths(vim.fn.stdpath('config'), 'plugins'),
-    -- compile_path = util.join_paths(vim.fn.stdpath('config'), 'plugin', 'packer_compiled.lua'),
+local nvim_name = vim.fn.expand('$avim')
+require('packer').init {
+    package_root = nvim_name .. '/plugins/pack',
+    compile_path = nvim_name .. '/plugins/packer_compile.lua',
     max_jobs = 7,
+    git = {
+        clone_timeout = 3600, -- Timeout, in seconds, for git clones
+    },
 }
 
-packer.startup(function(use)
--- Testing:  
-
-
+require('packer').startup(function(use)
 -- Dependencies:
    use 'wbthomason/packer.nvim'
    use 'nvim-lua/popup.nvim'

@@ -1,4 +1,10 @@
-vim.cmd('let startvim = reltime()') -- start chrono
+
+
+vim.cmd([[
+let startvim = reltime()
+set pp+=$avim/plugins
+set rtp+=$avim
+]]) -- start chrono
 -- INIT NVIM
 
 require('impatient')
@@ -11,7 +17,7 @@ require('luasnip.loaders.from_vscode').load()
 
 vim.cmd([[
 hi Normal guibg=NONE ctermbg=NONE
-source ~/.config/nvim/vimScript/init.vim
+source $avim/vimScript/init.vim
 let g:minimap_width = 12
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
