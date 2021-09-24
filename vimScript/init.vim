@@ -1,11 +1,11 @@
 
 " extend  setting by vimScripte 
-source $bvim/vimScript/setSetting.vim
-source $bvim/vimScript/keyMappings.vim
-source $bvim/vimScript/autosave.vim
-source $bvim/vimScript/count-time.vim
-source $bvim/vimScript/flutter-reload.vim
+source $nvimdir/vimScript/setSetting.vim
+source $nvimdir/vimScript/keyMappings.vim
+source $nvimdir/vimScript/autosave.vim
+source $nvimdir/vimScript/count-time.vim
+source $nvimdir/vimScript/flutter-reload.vim
 
 
-"source $bvim/vimScript/compe_Allsnip.vim
-" source $bvim/vimScript/mkdir.vim
+"source $nvimdir/vimScript/compe_Allsnip.vim
+" source $nvimdir/vimScript/mkdir.vim

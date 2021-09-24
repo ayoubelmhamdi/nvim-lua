@@ -1,10 +1,10 @@
 
 
-local nvim_name = vim.fn.expand('$avim')
+--local nvim_name = vim.fn.expand('$nvimdir')
 require('packer').init {
-    package_root = nvim_name .. '/plugins/pack',
-    compile_path = nvim_name .. '/plugins/packer_compile.lua',
-    max_jobs = 7,
+--    package_root = nvim_name .. '/plugins/pack',
+--    compile_path = nvim_name .. '/plugins/packer_compile.lua',
+    max_jobs = 4,
     git = {
         clone_timeout = 3600, -- Timeout, in seconds, for git clones
     },
@@ -28,10 +28,19 @@ require('packer').startup(function(use)
 
 -- LSP+IDE
    use 'neovim/nvim-lspconfig'
-   use 'hrsh7th/nvim-compe'
+   -- use 'hrsh7th/nvim-compe'
+   -- use 'L3MON4D3/LuaSnip'
    use 'stevearc/qf_helper.nvim'
 
+   -- nvim-cmp
+   use 'hrsh7th/cmp-nvim-lsp'
+   use 'hrsh7th/cmp-buffer'
+   use 'hrsh7th/nvim-cmp'
+
+  -- For luasnip user.
    use 'L3MON4D3/LuaSnip'
+   use 'saadparwaiz1/cmp_luasnip'
+
    -- use "ayoubelmhamdi/friendly-snippets"
 
    use 'akinsho/flutter-tools.nvim'
