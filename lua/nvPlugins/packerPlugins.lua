@@ -86,8 +86,8 @@ vim.cmd([[autocmd BufWritePost packerPlugins.lua source <afile> | PackerCompile]
 
 
 
--- NOTE: : <cmd> TodoTrouble TodoTelescope TodoQuickFix
--- TODO:
--- HACK:
--- WARN:
--- PERF:
+-- NOTE: : note todo hack warn pere
+-- TODO: : note todo hack warn pere 
+-- HACK: : note todo hack warn pere 
+-- WARN: : note todo hack warn pere 
+-- PERF: : note todo hack warn pere 

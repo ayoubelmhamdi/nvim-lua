@@ -1,5 +1,4 @@
 
-" TODO: view autopaire suggection in
 " https://github.com/hrsh7th/nvim-compe#mappings
 " inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
 " inoremap <silent><expr> <CR>      compe#confirm('<CR>')

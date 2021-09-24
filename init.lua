@@ -2,8 +2,8 @@
 
 vim.cmd([[
 let startvim = reltime()
-set pp+=$avim/plugins
-set rtp+=$avim
+set pp+=$bvim/plugins
+set rtp+=$bvim
 ]]) -- start chrono
 -- INIT NVIM
 
@@ -17,7 +17,7 @@ require('luasnip.loaders.from_vscode').load()
 
 vim.cmd([[
 hi Normal guibg=NONE ctermbg=NONE
-source $avim/vimScript/init.vim
+source $bvim/vimScript/init.vim
 let g:minimap_width = 12
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
