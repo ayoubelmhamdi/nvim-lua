@@ -1,4 +1,4 @@
----
+-- 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noselect"
 
@@ -21,11 +21,37 @@ cmp.setup({
   },
   sources = {
     { name = 'nvim_lsp' },
-    -- For luasnip user.
     { name = 'luasnip' },
-
     { name = 'buffer' },
-  }
+    { name = 'path' },
+    { name = 'cmp_tabnine' },
+    { name='look' },
+    { name = "latex_symbols" },
+    { name = 'treesitter' },
+    { name = 'emoji' },
+    -- 
+  },
+  formatting = {
+      format = function(entry, vim_item)
+          -- fancy icons and a name of kind
+          vim_item.kind = require("lspkind").presets.default[vim_item.kind] ..
+                              " " .. vim_item.kind
+          -- set a name for each source
+          vim_item.menu = ({
+              buffer = "[Buffer]",
+              nvim_lsp = "[LSP]",
+              ultisnips = "[UltiSnips]",
+              nvim_lua = "[Lua]",
+              cmp_tabnine = "[TabNine]",
+              look = "[Look]",
+              path = "[Path]",
+              spell = "[Spell]",
+              calc = "[Calc]",
+              emoji = "[Emoji]"
+          })[entry.source.name]
+          return vim_item
+      end
+  },
 })
 
 -- Setup lspconfig.

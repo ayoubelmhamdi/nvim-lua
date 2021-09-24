@@ -1,4 +1,5 @@
 
+--
 
 --local nvim_name = vim.fn.expand('$nvimdir')
 require('packer').init {
@@ -33,13 +34,17 @@ require('packer').startup(function(use)
    use 'stevearc/qf_helper.nvim'
 
    -- nvim-cmp
+   use 'onsails/lspkind-nvim'
    use 'hrsh7th/cmp-nvim-lsp'
    use 'hrsh7th/cmp-buffer'
    use 'hrsh7th/nvim-cmp'
-
-  -- For luasnip user.
+   use 'hrsh7th/cmp-path'
+   use {'tzachar/cmp-tabnine', run='./install.sh'}
    use 'L3MON4D3/LuaSnip'
    use 'saadparwaiz1/cmp_luasnip'
+   use 'octaltree/cmp-look'
+   use 'kdheepak/cmp-latex-symbols'
+   use 'hrsh7th/cmp-emoji'
 
    -- use "ayoubelmhamdi/friendly-snippets"
 
