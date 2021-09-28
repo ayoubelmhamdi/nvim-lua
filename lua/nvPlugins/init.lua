@@ -3,7 +3,7 @@ require('nvPlugins.packerPlugins')
 require('nvPlugins.globale')
 require('nvPlugins.lspkind')
 -- require('nvPlugins.telescope')
---require('nvPlugins.mytelescope')
+require('nvPlugins.mytelescope')
 require('nvPlugins.cheatsheet')
 --
 --

@@ -29,7 +29,8 @@ cmp.setup({
     { name = "latex_symbols" },
     { name = 'treesitter' },
     { name = 'emoji' },
-    -- 
+    --
+
   },
   formatting = {
       format = function(entry, vim_item)

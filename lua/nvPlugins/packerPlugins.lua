@@ -1,10 +1,8 @@
 
---
 
---local nvim_name = vim.fn.expand('$nvimdir')
 require('packer').init {
---    package_root = nvim_name .. '/plugins/pack',
---    compile_path = nvim_name .. '/plugins/packer_compile.lua',
+    package_root = nvim_name .. '/plugins/pack',
+    compile_path = nvim_name .. '/plugins/packer_compile_lua.lua',
     max_jobs = 4,
     git = {
         clone_timeout = 3600, -- Timeout, in seconds, for git clones
@@ -91,6 +89,8 @@ require('packer').startup(function(use)
 
    -- static config
    use 'static-nvim/mkdir'
+   -- test
+
 
 end)
 
