@@ -14,3 +14,5 @@ lua.lua
 lua.lua
 py.py
 md.md
+.ccls-cache/
+tex.tex
