@@ -34,7 +34,6 @@ cmp.setup({
     -- { name = "user_dictionary" },
     -- { name = "latex_symbols" },
     -- { name = 'emoji' },
-    --
 
   },
   formatting = {
