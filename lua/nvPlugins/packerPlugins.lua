@@ -1,8 +1,8 @@
 
 
 require('packer').init {
-    package_root = nvim_name .. '/plugins/pack',
-    compile_path = nvim_name .. '/plugins/packer_compile_lua.lua',
+   -- package_root = nvim_name .. '/plugins/pack',
+   --compile_path = nvim_name .. '/plugins/packer_compile_lua.lua',
     max_jobs = 4,
     git = {
         clone_timeout = 3600, -- Timeout, in seconds, for git clones
@@ -32,17 +32,21 @@ require('packer').startup(function(use)
    use 'stevearc/qf_helper.nvim'
 
    -- nvim-cmp
-   use 'onsails/lspkind-nvim'
-   use 'hrsh7th/cmp-nvim-lsp'
-   use 'hrsh7th/cmp-buffer'
-   use 'hrsh7th/nvim-cmp'
-   use 'hrsh7th/cmp-path'
-   use {'tzachar/cmp-tabnine', run='./install.sh'}
    use 'L3MON4D3/LuaSnip'
-   use 'saadparwaiz1/cmp_luasnip'
-   use 'octaltree/cmp-look'
-   use 'kdheepak/cmp-latex-symbols'
+   use 'hrsh7th/cmp-buffer'
+   use 'hrsh7th/cmp-nvim-lua'
    use 'hrsh7th/cmp-emoji'
+   use 'hrsh7th/cmp-nvim-lsp'
+   use 'hrsh7th/cmp-path'
+   use 'hrsh7th/nvim-cmp'
+   use 'kdheepak/cmp-latex-symbols'
+   use 'octaltree/cmp-look'
+   use 'onsails/lspkind-nvim'
+   use 'saadparwaiz1/cmp_luasnip'
+   use 'f3fora/cmp-spell'
+   use 'uga-rosa/cmp-user_dictionary'
+   use {'tzachar/cmp-tabnine', run='./install.sh'}
+   use {'f3fora/cmp-nuspell', rocks={'lua-nuspell'}}
 
    -- use "ayoubelmhamdi/friendly-snippets"
 
