@@ -4,6 +4,7 @@
 --nvim_name = vim.fn.expand('$XDG_CONFIG_HOME')
 
 vim.cmd([[
+set guifont=Fira\Code:4
 let startvim = reltime()
 ]]) -- start chrono
 
@@ -14,7 +15,7 @@ require('nvSettings')
 require('nvLSP')
 require('nvIDE')
 require('nvTheme')
-
+require('texmagic').setup{}
 
 vim.cmd([[
 source $nvimdir/vimScript/init.vim

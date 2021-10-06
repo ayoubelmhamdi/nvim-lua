@@ -46,28 +46,31 @@ set updatetime=600
 set wildignore+=*.o,*.obj,.git,*.pyc
 
 
-set noswapfile
-set nowritebackup
-
+set noswapfile nowritebackup undofile nobackup
 set backupdir=$HOME/.local/vim/backup
-set nobackup
-
 set undodir+=$HOME/.local/vim/undodir
-set undofile
 
 set shada='10000,n/mega/repo/dotfiles/myshada
-set autoread
-set nohlsearch
+set autoread autowrite
+set ignorecase smartcase
+set list listchars=eol:⏎
 
-"""""dis now
-""""" set foldmethod=manual
-""""set formatprg=prettier
-""""set ignorecase
-""""set incsearch
-""""set linebreak
-""""set nohlsearch
-""""set showtabline=2
-""""set smartcase
+set whichwrap=b,s,<,>
+set cmdheight=1
+
+augroup vimrc-incsearch-highlight
+  autocmd!
+  autocmd CmdlineEnter /,\? :set hlsearch
+  autocmd CmdlineLeave /,\? :set nohlsearch
+augroup END
+
+" Disabled Now: 
+"     set foldmethod=manual
+"     set formatprg=prettier
+"     set incsearch
+"     set linebreak
+"     set nohlsearch
+"     set showtabline=2
 
 
 
@@ -75,7 +78,7 @@ set nohlsearch
 """"set formatoptions=cro
 """"set go=a
 """"set laststatus=2
-""""set matchpairs+=<:>
+""""set matchpairs+=<:> "TODO: use filetype 
 """"set mmp=5000
 """"set modelines=2
 """"set noerrorbells visualbell t_vb=
@@ -94,22 +97,20 @@ set nohlsearch
 """"set timeoutlen=900
 """"set ttimeout
 """"set ttimeoutlen=0
-""""set whichwrap=b,s,<,>
 """"set wildmenu
 """"set wildmode=longest,list,full
 """"set virtualedit=block
 
 
 
+
 """""tow line for schow error
-set cmdheight=2
 """"" set endofline
 """"" set list
 """"" set listchars=tab:>-,eol:¶
-
+""""" set listchars=tab:>.,trail:.,precedes:<,extends:>
 """"" set tw=0
 """"" set wm=0
 """"" using only 1 column (and 1 space) while possible
 """"" set numberwidth=1
 """"" set nolazyredraw
-""""" set listchars=tab:>.,trail:.,precedes:<,extends:>

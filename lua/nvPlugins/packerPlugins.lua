@@ -60,8 +60,10 @@ require('packer').startup(function(use)
    use 'lukas-reineke/indent-blankline.nvim'
    use 'akinsho/nvim-bufferline.lua'
    use 'hoob3rt/lualine.nvim'
-   use 'wfxr/minimap.vim'
+   -- use 'wfxr/minimap.vim'
+   -- use 'nanozuki/tabby.nvim'
    -- use 'romgrk/barbar.nvim'
+   use 'aspeddro/slides.nvim'
 
 
 
@@ -90,9 +92,11 @@ require('packer').startup(function(use)
    use 'AckslD/nvim-neoclip.lua'
    -- markdown glow
    use 'ellisonleao/glow.nvim'
+   use 'jakewvincent/texmagic.nvim'
 
    -- static config
    use 'static-nvim/mkdir'
+   use 'fedepujol/move.nvim'
    -- test
 
 

@@ -1,3 +1,6 @@
+" :remove-me:
+nnoremap ll :LspInfo<cr>
+
 "
 " LSP
 nnoremap <space>ca  <cmd>lua vim.lsp.buf.code_action()<CR>
@@ -12,7 +15,7 @@ nnoremap gr         <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap [d         <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap ]d         <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
-nnoremap <C-space>k      <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <space>kk      <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <space>K   <Cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <space>wa  <cmd>lua vim.lsp.buf.add_workspace_folder()<CR>
 nnoremap <space>wr  <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
@@ -58,7 +61,7 @@ nnoremap <C-s> :HopChar2<cr>
 " Train
 nnoremap <Space>tl :TrainUpDown<cr>
 nnoremap <Space>tw :TrainWord<cr>
-nnoremap <Space>tt :TrainTextObj<cr>
+nnoremap <Space>   :TrainTextObj<cr>
 
 " select function
 " xnoremap iu :lua require"treesitter-unit".select()<CR>
@@ -79,17 +82,12 @@ nnoremap <Space>tt :TrainTextObj<cr>
 nnoremap <Esc>      :set nohlsearch<cr>
 nnoremap <Space>ee  :Lexplore<cr>
 nnoremap <Tab>      :bn<cr>
-nnoremap <S-Tab>    :bp<cr>
+nnoremap <S-Tab>    :tabn<cr>
 
 " simple clear text
-vnoremap <BS> di
+vnoremap <BS> di<Esc>
 
-" add delay for `o` in norml mod 
-" for help `space` execute after `o` in <Space>o  
-nmap o o
-" vnoremap <Space>i <Esc>i
-" vnoremap <Space>a <Esc>a
-
+cnoremap <C-A> <Home>
 
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -197,9 +195,16 @@ autocmd BufNewFile,BufRead requirements*.txt set syntax=python
 " nnoremap 9dd 10dd
 
 
+" Move 
+nnoremap <silent> <A-j> :MoveLine(1)<CR>
+nnoremap <silent> <A-k> :MoveLine(-1)<CR>
+
+vnoremap <silent> <A-j> :MoveBlock(1)<CR>
+vnoremap <silent> <A-k> :MoveBlock(-1)<CR>
+
 " Move 1 more lines up or down in normal and visual selection modes.
-vnoremap K :m '<-2<CR>gv=gv
-vnoremap J :m '>+1<CR>gv=gv
+" vnoremap K :m '<-2<CR>gv=gv
+" vnoremap J :m '>+1<CR>gv=gv
 " inoremap <C-space>k <C-o>:m .-2<CR>
 " inoremap <C-space>j <C-o>:m .+1<CR>
 " nnoremap <Space>k :m .-2<CR>==
@@ -207,8 +212,8 @@ vnoremap J :m '>+1<CR>gv=gv
 " nnoremap <Space>m :m .+==<Left><Left>
 
 "Lets me select moving by number.
-nnoremap <Space>k :m .-2==<Left><Left>
-nnoremap <Space>j :m .+1==<Left><Left>
+" nnoremap <Space>k :m .-2==<Left><Left>
+" nnoremap <Space>j :m .+1==<Left><Left>
 
 " Command 
 command! Telescopefindfiledart lua require("telescope.builtin").find_files({find_command = {"fd","--type","f","-E","*.lock","-E","ios","-E","android","-E","test","-E","build","-E","web","-E","linux","-E","*.png","-E","*.jpg","-E","*.md"}})
