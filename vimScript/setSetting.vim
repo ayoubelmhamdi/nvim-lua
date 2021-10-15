@@ -53,15 +53,15 @@ set undodir+=$HOME/.local/vim/undodir
 set shada='10000,n/mega/repo/dotfiles/myshada
 set autoread autowrite
 set ignorecase smartcase
-set list listchars=eol:⏎
+" set list listchars=eol:⏎
 
 set whichwrap=b,s,<,>
 set cmdheight=1
 
+set nohlsearch
 augroup vimrc-incsearch-highlight
   autocmd!
   autocmd CmdlineEnter /,\? :set hlsearch
-  autocmd CmdlineLeave /,\? :set nohlsearch
 augroup END
 
 " Disabled Now: 

@@ -2,8 +2,6 @@
 require('nvPlugins.packerPlugins')
 require('nvPlugins.globale')
 require('nvPlugins.lspkind')
--- require('nvPlugins.telescope')
-require('nvPlugins.mytelescope')
 require('nvPlugins.cheatsheet')
 --
 --
@@ -14,4 +12,5 @@ require('nvPlugins.cheatsheet')
 require('nvPlugins.save_session')
 require('nvPlugins.statusline')
 require('nvPlugins.comment')
+-- TODO: fix mapping
 require('nvPlugins.hop')

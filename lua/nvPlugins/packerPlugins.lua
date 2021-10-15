@@ -92,14 +92,15 @@ require('packer').startup(function(use)
    use 'AckslD/nvim-neoclip.lua'
    -- markdown glow
    use 'ellisonleao/glow.nvim'
-   use 'jakewvincent/texmagic.nvim'
+   -- use 'jakewvincent/texmagic.nvim'
 
    -- static config
    use 'static-nvim/mkdir'
    use 'fedepujol/move.nvim'
+   use 'tamton-aquib/essentials.nvim'
    -- test
 
-
+use {"akinsho/toggleterm.nvim"}
 end)
 
 

@@ -1,11 +1,12 @@
 " :remove-me:
 nnoremap ll :LspInfo<cr>
-
+nnoremap <Space>r :TexlabBuild<CR>
+nnoremap <Space>z :!zathura %:r.pdf & disown<CR><CR>
 "
 " LSP
-nnoremap <space>ca  <cmd>lua vim.lsp.buf.code_action()<CR>
-nnoremap <space>rn  <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <space>f   <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <Space>ca  <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <Space>rn  <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <Space>f   <cmd>lua vim.lsp.buf.formatting()<CR>
 
 
 nnoremap gD         <Cmd>lua vim.lsp.buf.declaration()<CR>
@@ -24,24 +25,8 @@ nnoremap <space>D   <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <space>le   <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 
 nnoremap <silent> <space>ll <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
-" code_action /lock list
 nnoremap <silent> <Space>lq <cmd>QFToggle!<CR>
 
-
-" Compe_snip
-" inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-" inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-" inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-" inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-" inoremap <silent><expr> <C-Space> compe#complete()
-
-" TODO: make this remape 
-" nvim-cmp
-" inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-" inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-" inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-" inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-" inoremap <silent><expr> <C-Space> compe#complete()
 
 
 " Telescope:
@@ -53,33 +38,16 @@ nnoremap <Space>ff    :Telescope find_files<cr>
 nnoremap <Space>fb    <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <Space>fh    <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <Space>fs    :Telescope current_buffer_fuzzy_find<cr>
-nnoremap <Space>rs    :Telescope session-lens  search_session<cr>
 
 " Hop
-nnoremap <C-s> :HopChar2<cr>
+nnoremap <Space><Space> :HopChar2<cr>
 
 " Train
 nnoremap <Space>tl :TrainUpDown<cr>
 nnoremap <Space>tw :TrainWord<cr>
-nnoremap <Space>   :TrainTextObj<cr>
+nnoremap <Space>t  :TrainTextObj<cr>
 
-" select function
-" xnoremap iu :lua require"treesitter-unit".select()<CR>
-" xnoremap au :lua require"treesitter-unit".select(true)<CR>
-" onoremap iu :<c-u>lua require"treesitter-unit".select()<CR>
-" onoremap au :<c-u>lua require"treesitter-unit".select(true)<CR>
-
-" delet last word/sentens/line it's work  if use save point bellow 
-" inoremap <C-u> <C-g>u<C-u>
-
-"mapping by vim scripte
-" inoremap ) )<c-g>u
-" inoremap ] ]<c-g>u
-" inoremap } }<c-g>u
-" inoremap ? ?<c-g>u
-" inoremap ! !<c-g>u
-
-nnoremap <Esc>      :set nohlsearch<cr>
+nnoremap <Esc>      :set nohlsearch!<cr>
 nnoremap <Space>ee  :Lexplore<cr>
 nnoremap <Tab>      :bn<cr>
 nnoremap <S-Tab>    :tabn<cr>
@@ -221,7 +189,8 @@ command! Ps PackerSync
 command! Pi PackerInstall
 command! Pc PackerClean
 command! Telescopefy Telescope frecency default_text=:CWD: 
-command! Reloader lua require('nvPlugins.mytelescope').reloader()
+command! Reloader lua require('telescope').reloader()
 command! W w
 command! Q q
 command! WQ wq
+command! Wq wq
