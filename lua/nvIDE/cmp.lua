@@ -3,10 +3,9 @@
 -- Set completeopt to have a better completion experience
 -- tis some visiter
 --
-vim.o.completeopt = "menuone,noselect"
-
--- Setup nvim-cmp.
+vim.o.completeopt = "menu,menuone,noselect"
 local cmp = require'cmp'
+
 
 cmp.setup({
   snippet = {
@@ -20,6 +19,13 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<Tab>'] = function(fallback)
+        if cmp.visible() then
+          cmp.select_next_item()
+        else
+          fallback()
+        end
+      end
   },
   sources = {
     { name = 'nvim_lsp' },
