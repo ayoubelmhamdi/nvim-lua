@@ -163,7 +163,7 @@ autocmd BufNewFile,BufRead requirements*.txt set syntax=python
 " nnoremap 9dd 10dd
 
 
-" Move 
+" Move : 
 nnoremap <silent> <A-j> :MoveLine(1)<CR>
 nnoremap <silent> <A-k> :MoveLine(-1)<CR>
 

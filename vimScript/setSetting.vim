@@ -39,6 +39,7 @@ set smarttab
 
 set backspace=indent,eol,start
 set colorcolumn=92
+set cursorline
 set scrolloff=4
 
 set mouse=a

@@ -21,6 +21,7 @@ let startvim = reltime()
 ]]) -- start chrono !
 
 
+
 require('impatient')
 require('nvPlugins')
 require('tsp')

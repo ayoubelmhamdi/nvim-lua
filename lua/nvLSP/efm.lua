@@ -1,14 +1,19 @@
-local isort = {formatCommand = "isort --quiet -", formatStdin = true}
-local clangf = {formatCommand = "clang-format", formatStdin = true}
-local yapf = {formatCommand = "yapf --quiet", formatStdin = true}
 local luaf = {
     formatCommand = "lua-format -i --no-keep-simple-function-one-line --no-break-after-operator --column-limit=150 --break-after-table-lb",
     formatStdin = true
 }
+
+local autopep = {formatCommand = 'autopep8 -', formatStdin = true}
+local isort = {formatCommand = "isort --quiet -", formatStdin = true}
+local black = {formatCommand = "black --quiet -", formatStdin = true}
+local yapf = {formatCommand = "yapf --quiet", formatStdin = true}
+
+local clangf = {formatCommand = "clang-format", formatStdin = true}
 local latexindent = {formatCommand = "latexindent", formatStdin = true}
 local cmakef = {formatCommand = 'cmake-format', formatStdin = true}
-local shfmt = {formatCommand = 'shfmt -ci -s -bn', formatStdin = true}
 local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}
+
+local shfmt = {formatCommand = 'shfmt -ci -s -bn', formatStdin = true}
 local shellcheck = {LintCommand = 'shellcheck -f gcc -x', lintFormats = {'%f:%l:%c: %trror: %m', '%f:%l:%c: %tarning: %m', '%f:%l:%c: %tote: %m'}}
 
 require"lspconfig".efm.setup {
@@ -19,7 +24,7 @@ require"lspconfig".efm.setup {
     settings = {
         rootMarkers = {".git/"},
         languages = {
-            python = {isort, yapf},
+            python = {autopep, isort, black, yapf},
             lua = {luaf},
             tex = {latexindent},
             sh = {shellcheck, shfmt},

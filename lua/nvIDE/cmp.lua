@@ -30,10 +30,10 @@ cmp.setup({
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
-    { name = 'buffer' },
     { name = 'path' },
     { name = 'cmp_tabnine' },
     { name = 'treesitter' },
+    { name = 'buffer' },
     -- { name = 'nvim_lua', keyword_lengh=1 },
     -- { name = 'look' , keyword_lengh=0 },
     -- { name = 'spell' },
@@ -69,4 +69,5 @@ cmp.setup({
           return vim_item
       end
   },
+
 })
