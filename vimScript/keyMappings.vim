@@ -31,6 +31,10 @@ nnoremap <silent> <Space>lq <cmd>QFToggle!<CR>
 
 " Telescope:
 autocmd FileType dart nnoremap <Space>o :Telescopefindfiledart<cr>
+" autocmd BufWinEnter,WinEnter term://* startinsert
+" autocmd BufLeave term://* stopinsert
+autocmd TermOpen * startinsert
+
 nnoremap     <M-m>    <cmd>lua require('nvPlugins.mytelescope').gl()<cr>
 nnoremap <Space>o     :Telescopefy<cr>
 nnoremap <Space>fg    <cmd>lua require('telescope.builtin').live_grep()<cr>

@@ -8,7 +8,7 @@
 lua << EOF
 vim.o.hidden = true
 vim.o.fileencoding = "utf-8"
-vim.o.termguicolors = true
+--vim.o.termguicolors = true
 vim.o.splitbelow = true
 vim.o.splitright = true
 --vim.o.conceallevel = 0 -- So that I can see `` in markdown files
@@ -48,8 +48,8 @@ set wildignore+=*.o,*.obj,.git,*.pyc
 
 
 set noswapfile nowritebackup undofile nobackup
-set backupdir=$HOME/.local/vim/backup
-set undodir+=$HOME/.local/vim/undodir
+set backupdir=/tmp/vim/backup
+set undodir+=/tmp/vim/undodir
 
 set shada='10000,n/mega/repo/dotfiles/myshada
 set autoread autowrite

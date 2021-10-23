@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 -- adam adam adam
-
 -- global path that should be use for plugins and modules
 --nvim_name = vim.fn.expand('$XDG_CONFIG_HOME')
 local line = vim.fn.line

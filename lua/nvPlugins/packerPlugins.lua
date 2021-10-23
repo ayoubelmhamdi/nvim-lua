@@ -96,6 +96,8 @@ require('packer').startup(function(use)
     -- test
 
     use 'max397574/better-escape.nvim'
+    use 'norcalli/nvim-colorizer.lua'
+
 end)
 
 vim.cmd([[autocmd BufWritePost packerPlugins.lua source <afile> | PackerCompile]])
