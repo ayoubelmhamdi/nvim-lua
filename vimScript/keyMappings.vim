@@ -28,11 +28,11 @@ nnoremap <silent> <space>ll <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 nnoremap <silent> <Space>lq <cmd>QFToggle!<CR>
 
 
+" make
+"nnoremap ll :vs<cr>:term ./suckless/statusbar<cr><cr>touch 
 
 " Telescope:
 autocmd FileType dart nnoremap <Space>o :Telescopefindfiledart<cr>
-" autocmd BufWinEnter,WinEnter term://* startinsert
-" autocmd BufLeave term://* stopinsert
 autocmd TermOpen * startinsert
 
 nnoremap     <M-m>    <cmd>lua require('nvPlugins.mytelescope').gl()<cr>

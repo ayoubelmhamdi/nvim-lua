@@ -9,7 +9,6 @@ require('nvPlugins.cheatsheet')
 -- require('nvPlugins.spellsitter')
 -- require('nvPlugins.tabline')
 
-require('nvPlugins.save_session')
 require('nvPlugins.statusline')
 require('nvPlugins.comment')
 -- TODO: fix mapping

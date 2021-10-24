@@ -64,8 +64,8 @@ require('packer').startup(function(use)
 
     -- Misc
     use '907th/vim-auto-save' -- auto save files like dart
-    use 'rmagatti/auto-session' -- save session layout
-    use 'rmagatti/session-lens' -- save session layout with telescope
+    -- use 'rmagatti/auto-session' -- save session layout
+    -- use 'rmagatti/session-lens' -- save session layout with telescope
     use 'tpope/vim-fugitive'
     use 'airblade/vim-rooter'
     -- use 'ahmedkhalf/lsp-rooter.nvim' -- chaneg workin directory
