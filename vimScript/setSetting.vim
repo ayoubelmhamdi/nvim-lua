@@ -21,7 +21,7 @@ vim.o.clipboard = "unnamedplus"
 
 -- 
 EOF
-" syntax on
+syntax on
 set inccommand=split " -- Make substitution work in realtime
 set ts=2 " -- Insert 4 spaces for a tab
 set sw=2 " -- Change the number of space characters inserted for indentation
