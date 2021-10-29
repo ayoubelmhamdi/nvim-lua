@@ -44,7 +44,7 @@ require('packer').startup(function(use)
     use 'f3fora/cmp-spell'
     use 'uga-rosa/cmp-user_dictionary'
     use {'tzachar/cmp-tabnine', run = './install.sh'}
-    use {'f3fora/cmp-nuspell', rocks = {'lua-nuspell'}}
+    -- use {'f3fora/cmp-nuspell', rocks = {'lua-nuspell'}}
 
     -- use "ayoubelmhamdi/friendly-snippets"
 
@@ -97,6 +97,7 @@ require('packer').startup(function(use)
 
     use 'max397574/better-escape.nvim'
     use 'norcalli/nvim-colorizer.lua'
+    use 'voldikss/vim-floaterm'
 
 end)
 
