@@ -5,7 +5,7 @@ local nvim_lsp = require('lspconfig')
 
 -- TODO: splite on_attach from boocle to file
 --for simple lsp use 'local cmd for each lsp and make bookle'
-local servers = { "texlab","pyright", "rust_analyzer", "tsserver","vimls","zeta_note","bashls", "ccls","denols"  }
+local servers = { "texlab","pyright", "rust_analyzer", "tsserver","vimls","zeta_note","bashls", "clangd","denols"  }
 for _, lsp in ipairs(servers) do
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   nvim_lsp[lsp].setup { on_attach = on_attach ,
@@ -23,17 +23,17 @@ nvim_lsp.bashls.setup {
     -- root_dir =  vim.loop.cwd()
 }
 
-nvim_lsp.ccls.setup {
-	init_options = {
-    cache = { directory = ".ccls-cache"; },
-    highlight = { lsRanges = true },
-		compilationDatabaseDirectory = "build";
-		index = { threads = 0; };
-		clang = {
-			excludeArgs = { "-frounding-math"} ;
-		},
-	},
-}
+-- nvim_lsp.ccls.setup {
+-- 	init_options = {
+--     cache = { directory = ".ccls-cache"; },
+--     highlight = { lsRanges = true },
+-- 		compilationDatabaseDirectory = "build";
+-- 		index = { threads = 0; };
+-- 		clang = {
+-- 			excludeArgs = { "-frounding-math"} ;
+-- 		},
+-- 	},
+-- }
 
 -- TODO: move to file
 require'lspconfig'.texlab.setup{

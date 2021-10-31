@@ -16,6 +16,11 @@ local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatSt
 local shfmt = {formatCommand = 'shfmt -ci -s -bn', formatStdin = true}
 local shellcheck = {LintCommand = 'shellcheck -f gcc -x', lintFormats = {'%f:%l:%c: %trror: %m', '%f:%l:%c: %tarning: %m', '%f:%l:%c: %tote: %m'}}
 
+local markdownf =  { formatCommand = "pandoc -f markdown -t gfm -sp --tab-stop=4", formatStdin = true }
+
+
+
+
 require"lspconfig".efm.setup {
 
     cmd = {"efm-langserver"},
@@ -33,7 +38,8 @@ require"lspconfig".efm.setup {
             css = {prettier},
             json = {prettier},
             yaml = {prettier},
-            cpp = {clangf}
+            cpp = {clangf},
+            markdown= {markdownf},
         }
     }
 }
