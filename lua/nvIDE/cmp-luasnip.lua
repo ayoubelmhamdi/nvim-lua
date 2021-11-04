@@ -13,20 +13,20 @@ vim.cmd([[
         autocmd BufWritePost *.json lua require("luasnip.loaders.from_vscode").load()
 ]])
 
-local has_words_before = function()
-  if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
-    return false
-  end
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
+-- local has_words_before = function()
+--   if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
+--     return false
+--   end
+--   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+--   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+-- end
 
-local feedkey = function(key)
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), "n", true)
-end
+-- local feedkey = function(key)
+--   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), "n", true)
+-- end
 
-local luasnip = require("luasnip")
-local cmp = require("cmp")
+-- local luasnip = require("luasnip")
+-- local cmp = require("cmp")
 
 -- cmp.setup({
 
@@ -63,3 +63,58 @@ local cmp = require("cmp")
 
 --   -- ... Your other configuration ...
 -- })
+
+
+
+
+local function prequire(...)
+local status, lib = pcall(require, ...)
+if (status) then return lib end
+    return nil
+end
+
+local luasnip = prequire('luasnip')
+local cmp = prequire("cmp")
+
+local t = function(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+    local col = vim.fn.col('.') - 1
+    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        return true
+    else
+        return false
+    end
+end
+
+_G.tab_complete = function()
+    if cmp and cmp.visible() then
+        cmp.select_next_item()
+    elseif luasnip and luasnip.expand_or_jumpable() then
+        return t("<Plug>luasnip-expand-or-jump")
+    elseif check_back_space() then
+        return t "<Tab>"
+    else
+        cmp.complete()
+    end
+    return ""
+end
+_G.s_tab_complete = function()
+    if cmp and cmp.visible() then
+        cmp.select_prev_item()
+    elseif luasnip and luasnip.jumpable(-1) then
+        return t("<Plug>luasnip-jump-prev")
+    else
+        return t "<S-Tab>"
+    end
+    return ""
+end
+
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<C-E>", "<Plug>luasnip-next-choice", {})
+vim.api.nvim_set_keymap("s", "<C-E>", "<Plug>luasnip-next-choice", {})

@@ -75,7 +75,7 @@ require('packer').startup(function(use)
     use 'phaazon/hop.nvim'
     use "folke/todo-comments.nvim"
     -- startup imprevment to be speed
-    use {'lewis6991/impatient.nvim', rocks = 'mpack'}
+    use 'lewis6991/impatient.nvim'
     -- select funcion
     -- by treesitter
     use 'David-Kunz/treesitter-unit'

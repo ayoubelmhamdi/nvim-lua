@@ -1,3 +1,15 @@
+--
+--
+--
+--
+-- NOT USE NOW
+--
+--
+--
+--
+--
+--
+--
 -- to make snippet change whe add any char
 -- know i'm disable because TextChangedI make text write randomly on screen
 -- require'luasnip'.config.setup({updateevents="TextChangedI" })

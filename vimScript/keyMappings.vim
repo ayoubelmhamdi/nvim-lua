@@ -1,32 +1,31 @@
-" :remove-me:
-nnoremap ll :LspInfo<cr>
-nnoremap <Space>r :TexlabBuild<CR>
-nnoremap <Space>z :!zathura %:r.pdf & disown<CR><CR>
-"
 " LSP
 nnoremap <Space>ca  <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <Space>rn  <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <Space>f   <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <space>K   <Cmd>lua vim.lsp.buf.hover()<CR>
 
 
 nnoremap gD         <Cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap gd         <Cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap gi         <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap gr         <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap [d         <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap ]d         <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
+nnoremap gi         <cmd>lua vim.lsp.buf.implementation()<CR>
+
 nnoremap <space>kk      <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <space>K   <Cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <space>wa  <cmd>lua vim.lsp.buf.add_workspace_folder()<CR>
 nnoremap <space>wr  <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
 nnoremap <space>wl  <cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>
 nnoremap <space>D   <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <space>le   <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 
-nnoremap <silent> <space>ll <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+"nnoremap <silent> <space>ll <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 nnoremap <silent> <Space>lq <cmd>QFToggle!<CR>
 
+" :remove-me:
+nnoremap <Space>r :TexlabBuild<CR>
+nnoremap <Space>z :!zathura %:r.pdf & disown<CR><CR>
 
 " make
 "nnoremap ll :vs<cr>:term ./suckless/statusbar<cr><cr>touch 
