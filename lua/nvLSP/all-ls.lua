@@ -5,7 +5,7 @@ local nvim_lsp = require('lspconfig')
 
 -- TODO: splite on_attach from boocle to file
 --for simple lsp use 'local cmd for each lsp and make bookle'
-local servers = { "texlab","pyright","tsserver" , "rust_analyzer", "tsserver","vimls","zeta_note","bashls", "denols"  }
+local servers = { "texlab","pyright","tsserver" , "rust_analyzer", "tsserver","vimls","zeta_note","bashls"  }
 for _, lsp in ipairs(servers) do
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   nvim_lsp[lsp].setup { on_attach = on_attach ,

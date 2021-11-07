@@ -1,22 +1,16 @@
-vim.g.mapleader = " "
-vim.cmd([[
-set guifont=Fira\Code:4
-let startvim = reltime()
-source $nvimdir/vimScript/init.vim
-]]) -- start chrono !
+  vim.g.mapleader = " "
+  vim.cmd('set guifont=Fira Code:4')
+  vim.cmd('let startvim = reltime()')
+  vim.cmd('source $nvimdir/vimScript/init.vim')
+  -- start chrono !
 
-require('ay')
-require('nvPlugins')
-require('tsp')
-require('nvSettings')
-require('nvLSP')
-require('nvIDE')
-require('nvTheme')
+  require('ay')
+  require('nvPlugins')
+  require('tsp')
+  require('nvSettings')
+  -- require('nvLSP')
+  require('nvIDE')
+  -- require('nvTheme')
 
-vim.cmd([[
-hi Normal guibg=NONE ctermbg=NONE
-
-lua require('impatient')
-" end chrono
-echo reltimestr(reltime(startvim))
-]])
+  require('impatient')
+  vim.cmd('echo reltimestr(reltime(startvim))')

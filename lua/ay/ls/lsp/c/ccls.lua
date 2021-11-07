@@ -1,0 +1,12 @@
+
+-- nvim_lsp.ccls.setup {
+-- 	init_options = {
+--     cache = { directory = ".ccls-cache"; },
+--     highlight = { lsRanges = true },
+-- 		compilationDatabaseDirectory = "build";
+-- 		index = { threads = 0; };
+-- 		clang = {
+-- 			excludeArgs = { "-frounding-math"} ;
+-- 		},
+-- 	},
+-- }
