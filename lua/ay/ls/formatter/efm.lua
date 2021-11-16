@@ -21,8 +21,7 @@ local black = {formatCommand = "black --quiet -", formatStdin = true}
 local yapf = {formatCommand = "yapf --quiet", formatStdin = true}
 
 local clangf = {formatCommand = "clang-format", formatStdin = true}
-local latexindent = {formatCommand = "latexindent", formatStdin = true}
-local cmakef = {formatCommand = 'cmake-format', formatStdin = true}
+local latexindent = {formatCommand = "latexindent", formatStdin = true} local cmakef = {formatCommand = 'cmake-format', formatStdin = true}
 local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}
 
 local shfmt = {formatCommand = 'shfmt -ci -s -bn', formatStdin = true}
@@ -46,7 +45,7 @@ require"lspconfig".efm.setup {
             css = {prettier},
             html = {prettier},
             json = {prettier},
-            javascript = {eslint},
+            javascript = {prettier},--{prettier,eslint},
             lua = {luaf},
             markdown= {markdownf},
             python = {autopep, isort, black, yapf},

@@ -5,5 +5,5 @@ require('nvIDE.ay_cmp')
 -- require('nvIDE.luasnip')
 --require('nvIDE.cmp-luasnip')
 require('nvIDE.autopair')
-require('nvIDE.surround')
+-- require('nvIDE.surround')
 

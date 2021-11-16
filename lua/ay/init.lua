@@ -7,7 +7,7 @@
   require('ay.ls.lsp.latex.texlab')
   require('ay.ls.lsp.lua.lua-ls')
   require('ay.ls.lsp.markdown.zeta-note')
-  --require('ay.ls.lsp.javascript.deno')
+  require('ay.ls.lsp.javascript.deno')
   --require('ay.ls.lsp.javascript.tsserver')
 
 -- EFM formater
@@ -18,3 +18,6 @@
   require('ay.theme.statusline')
   require('ay.theme.blankline')
   require('ay.theme.colorscheme') -- make in the end/to avoid ovvrided
+
+  -- Pligin
+  require('ay.conf/lightspeed_')

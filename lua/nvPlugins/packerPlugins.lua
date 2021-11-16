@@ -72,7 +72,7 @@ require('packer').startup(function(use)
     use 'tpope/vim-commentary'
     -- use 'lewis6991/spellsitter.nvim'
     use 'tjdevries/train.nvim'
-    use 'phaazon/hop.nvim'
+    -- use 'phaazon/hop.nvim'
     use "folke/todo-comments.nvim"
     -- startup imprevment to be speed
     use 'lewis6991/impatient.nvim'
@@ -98,6 +98,8 @@ require('packer').startup(function(use)
     use 'max397574/better-escape.nvim'
     use 'norcalli/nvim-colorizer.lua'
     use 'voldikss/vim-floaterm'
+    use 'ggandor/lightspeed.nvim'
+
 
 end)
 

@@ -1,7 +1,8 @@
 " LSP
 nnoremap <Space>ca  <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <Space>rn  <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <Space>f   <cmd>lua vim.lsp.buf.formatting()<CR>
+" nnoremap <Space>f   <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <Space>f   <cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>
 nnoremap <space>K   <Cmd>lua vim.lsp.buf.hover()<CR>
 
 
@@ -53,7 +54,7 @@ nnoremap <Space>t  :TrainTextObj<cr>
 nnoremap <Esc>      :set nohlsearch!<cr>
 nnoremap <Space>ee  :Lexplore<cr>
 nnoremap <Tab>      :bn<cr>
-nnoremap <S-Tab>    :tabn<cr>
+nnoremap <S-Tab>    :bp<cr>
 
 " simple clear text
 vnoremap <BS> di<Esc>

@@ -12,4 +12,4 @@ require('nvPlugins.cheatsheet')
 require('nvPlugins.statusline')
 require('nvPlugins.comment')
 -- TODO: fix mapping
-require('nvPlugins.hop')
+
