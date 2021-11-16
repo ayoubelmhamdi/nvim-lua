@@ -13,4 +13,5 @@
   -- require('nvTheme')
 
   require('impatient')
+
   vim.cmd('echo reltimestr(reltime(startvim))')
