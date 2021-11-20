@@ -13,6 +13,9 @@
 -- EFM formater
   require('ay.ls.formatter.efm')
 
+  -- plugin lsp
+  require("flutter-tools").setup{}
+
 -- theme
 --require('ay.theme.gruvbuddy')
   require('ay.theme.statusline')
@@ -21,3 +24,5 @@
 
   -- Pligin
   require('ay.conf/lightspeed_')
+
+
