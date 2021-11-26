@@ -23,6 +23,9 @@
   require('ay.theme.colorscheme') -- make in the end/to avoid ovvrided
 
   -- Pligin
-  require('ay.conf/lightspeed_')
+  -- require('ay.conf/lightspeed')
 
+  -- function
+  require('ay.function.clip_board')
+  require('ay.function.last-position')
 

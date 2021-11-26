@@ -98,7 +98,10 @@ require('packer').startup(function(use)
     use 'max397574/better-escape.nvim'
     use 'norcalli/nvim-colorizer.lua'
     use 'voldikss/vim-floaterm'
-    use 'ggandor/lightspeed.nvim'
+    -- i don't need motion by f/F/t/T
+    -- i wnat only color to do this 
+    -- this plugin is autostart so i cant use it with my config
+    -- use 'ggandor/lightspeed.nvim' 
 
 
 end)

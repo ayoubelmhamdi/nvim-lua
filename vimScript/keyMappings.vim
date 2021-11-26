@@ -43,6 +43,10 @@ nnoremap <Space>fb    <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <Space>fh    <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <Space>fs    :Telescope current_buffer_fuzzy_find<cr>
 
+
+nnoremap <Space>fd    :lua require('tsp.cwd-tsp').search_dotfiles()<cr> 
+nnoremap <Space>fn    :lua require('tsp.cwd-tsp').search_nvim()<cr> 
+
 " Hop
 nnoremap <Space><Space> :HopChar2<cr>
 
@@ -55,9 +59,6 @@ nnoremap <Esc>      :set nohlsearch!<cr>
 nnoremap <Space>ee  :Lexplore<cr>
 nnoremap <Tab>      :bn<cr>
 nnoremap <S-Tab>    :bp<cr>
-
-" simple clear text
-vnoremap <BS> di<Esc>
 
 cnoremap <C-A> <Home>
 
@@ -85,10 +86,10 @@ inoremap <C-space>, <Space>,<Left>
 inoremap <C-space><C-,> <Right>,oo<Left><Left>
 
 " FLUTTER
-nnoremap <silent> <Space>fr :FlutterRun<cr>
-nnoremap <silent> <Space>ft :FlutterRestart<cr>
 nnoremap <silent> <Space>fp :FlutterPubGet<cr>
-nnoremap <silent> <Space>fq :FlutterQuit<cr>
+" nnoremap <silent> <Space>fr :FlutterRun<cr>
+" nnoremap <silent> <Space>ft :FlutterRestart<cr>
+" nnoremap <silent> <Space>fq :FlutterQuit<cr>
 
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>

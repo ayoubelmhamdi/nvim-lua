@@ -17,11 +17,13 @@ vim.wo.relativenumber = true
 vim.o.backup = false
 vim.o.writebackup = false
 vim.wo.signcolumn = "yes"
-vim.o.clipboard = "unnamedplus"
+--vim.o.clipboard = "unnamedplus"
 
 -- 
 EOF
 " syntax on
+
+set clipboard+=unnamedplus
 set inccommand=split " -- Make substitution work in realtime
 set ts=2 " -- Insert 4 spaces for a tab
 set sw=2 " -- Change the number of space characters inserted for indentation
