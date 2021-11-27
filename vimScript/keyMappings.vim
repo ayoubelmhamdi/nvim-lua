@@ -112,13 +112,16 @@ nnoremap <C-right> :vertical resize +2<cr>
 " fix p y
 nnoremap Y y$
 nnoremap V V$h
+nnoremap <C-q> :q<cr>
+nnoremap <C-s> :wq<cr>
 nnoremap <Space>w :w<cr>
 inoremap <C-space><C-space> <esc>
 
 
 " Alias replace all to
-vnoremap <A-s> y:%s///g<Left><Left><Left><C-r>0<right>
-vnoremap <C-s> y:s///g<Left><Left><Left><C-r>0<right>
+nnoremap <A-s> :s#\<<C-r>=expand("<cword>")<CR>\>#<C-r>=expand("<cword>")<CR> 
+vnoremap <C-r> "hy:%s/<C-r>h/
+" vnoremap <A-s> y:%s///g<Left><Left><Left><C-r>0<right>
 
 " _co is best than c i dont know why
 
