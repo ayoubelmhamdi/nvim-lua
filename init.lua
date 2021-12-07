@@ -16,6 +16,7 @@
 
   vim.cmd('echo reltimestr(reltime(startvim))')
 
-  -- function ddd(a,b,c)
-  --   -- code
-  -- end
+  function ddd(a,b,c)
+    -- code
+  end
+
