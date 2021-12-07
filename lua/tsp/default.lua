@@ -1,27 +1,37 @@
 local action_state = require('telescope.actions.state')
 require('telescope').setup {
     defaults = {
-        vimgrep_arguments = {'rg', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
-        file_sorter = require("telescope.sorters").get_fzy_sorter,
+        -- vimgrep_arguments = {'fd'},
+        find_command = {'fad'},
+        -- vimgrep_arguments = {"rig", "--color=never", "--no-heading", "--with-filename", "--line-number", "--column", "--smart-case", "--hidden"},
+        -- find_command = {"rg", '--no-binary', "--no-heading", "--with-filename", "--line-number", "--column", "--smart-case"},
+        -- use_less = true,
+        -- file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+        -- grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+        -- qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+
+        -- vimgrep_arguments = {'rgo','--no-binary', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
+        -- find_command= {'rg','--ignore','--hidden','--files','--no-binary'},
+        -- file_sorter = require("telescope.sorters").get_fzy_sorter,
+        -- file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+        -- grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+        -- qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+        -- sorting_strategy = "ascending",
+        -- layout_strategy = "horizontal",
+        -- layout_config = {prompt_position = "top", height = 0.90, width = 0.90, preview_width = 0.60},
+        -- -- layout_config = {
+        -- --  prompt_position = "top",
+        -- --  horizontal = {mirror = false},
+        -- --  vertical = {mirror = false},
+        -- --  --width = 0.75,
+        -- --  --preview_cutoff = 120,
+        -- -- },
+        -- -- layout_config = {
+        -- --   prompt_position="top"
+        -- -- },
         color_devicons = true,
-        file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-        grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-        qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
         prompt_prefix = " ",
         selection_caret = " ",
-        sorting_strategy = "ascending",
-        layout_strategy = "horizontal",
-        layout_config = {prompt_position = "top", height = 0.90, width = 0.90, preview_width = 0.60},
-        -- layout_config = {
-        --  prompt_position = "top",
-        --  horizontal = {mirror = false},
-        --  vertical = {mirror = false},
-        --  --width = 0.75,
-        --  --preview_cutoff = 120,
-        -- },
-        -- layout_config = {
-        --   prompt_position="top"
-        -- },
         mappings = {
             i = {
                 ["<c-a>"] = function()
@@ -31,6 +41,8 @@ require('telescope').setup {
             }
         }
     },
+    -- pickers = {find_files = {theme = "dropdown"}},
+    pickers = {find_files = {theme = "dropdown"}, buffers = {sort_lastused = true, previewer = false}},
     extensions = {
         fzf = {
             fuzzy = true, -- false will only do exact matching

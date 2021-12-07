@@ -5,10 +5,9 @@ M.search_dotfiles = function()
         prompt_title = '< Dotfiles > ',
         hidden = true,
         cwd = "/root/stow-dotfiles",
-        file_ignore_patterns = {'git/','.github/','.gitignore','.fonts','themepack/'},
+        file_ignore_patterns = {'git/', '.github/', '.gitignore', '.fonts', 'themepack/'}
     })
 end
-
 
 -- nvimdir config
 M.search_nvim = function()
@@ -16,7 +15,17 @@ M.search_nvim = function()
         prompt_title = '< NVIM > ',
         hidden = true,
         cwd = "/root/.config/nvim",
-        file_ignore_patterns = {'git/','.github/','.gitignore'},
+        file_ignore_patterns = {'git/', '.github/', '.gitignore'}
+    })
+end
+
+-- project
+M.search_proj = function(proj)
+    require('telescope.builtin').find_files({
+        prompt_title = '< ' ..proj .. '>',
+        hidden = true,
+        cwd = "/projects/c/" .. proj,
+        file_ignore_patterns = {'git/','.github/','.gitignore','%.o','^slstatus$'},
     })
 end
 
