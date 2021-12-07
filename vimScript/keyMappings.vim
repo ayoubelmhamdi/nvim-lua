@@ -38,7 +38,7 @@ autocmd TermOpen * setlocal nonu nornu | startinsert
 nnoremap     <M-m>    <cmd>lua require('nvPlugins.mytelescope').gl()<cr>
 nnoremap <Space>o     :Telescopefy<cr>
 nnoremap <Space>fg    <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <Space>ff    :Telescope find_files<cr>
+nnoremap <Space>ff    <cmd>lua require('telescope.builtin').find_files({ find_command = { 'fd'}})  <cr>
 nnoremap <Space>fb    <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <Space>fh    <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <Space>fs    :Telescope current_buffer_fuzzy_find<cr>
@@ -46,6 +46,8 @@ nnoremap <Space>fs    :Telescope current_buffer_fuzzy_find<cr>
 
 nnoremap <Space>fd    :lua require('tsp.cwd-tsp').search_dotfiles()<cr> 
 nnoremap <Space>fn    :lua require('tsp.cwd-tsp').search_nvim()<cr> 
+nnoremap <Space>1    :lua require('tsp.cwd-tsp').search_proj("sl")<cr> 
+nnoremap <Space>2    :lua require('tsp.cwd-tsp').search_proj("slstatus")<cr> 
 
 " Hop
 nnoremap <Space><Space> :HopChar2<cr>
@@ -110,6 +112,8 @@ nnoremap <C-right> :vertical resize +2<cr>
 " nnoremap <A-m> :!mv<Space>%<Space>
 
 " fix p y
+nnoremap gn :tabnew<CR>
+nnoremap s <Nop>
 nnoremap Y y$
 nnoremap V V$h
 nnoremap <C-q> :q<cr>

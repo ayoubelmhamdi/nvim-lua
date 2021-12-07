@@ -12,17 +12,21 @@ vim.o.fileencoding = "utf-8"
 vim.o.splitbelow = true
 vim.o.splitright = true
 --vim.o.conceallevel = 0 -- So that I can see `` in markdown files
-vim.wo.number = true
-vim.wo.relativenumber = true
+--vim.wo.number = true
+--vim.wo.relativenumber = true
 vim.o.backup = false
 vim.o.writebackup = false
 vim.wo.signcolumn = "yes"
 --vim.o.clipboard = "unnamedplus"
-
--- 
 EOF
 " syntax on
 
+
+set sidescrolloff=20
+set path+=**
+set whichwrap=b,s,<,>,h,l,[,]
+set nojoinspaces 
+set linespace=5
 set clipboard+=unnamedplus
 set inccommand=split " -- Make substitution work in realtime
 set ts=2 " -- Insert 4 spaces for a tab
@@ -40,7 +44,7 @@ set expandtab
 set smarttab
 
 set backspace=indent,eol,start
-set colorcolumn=92
+set colorcolumn=110
 set cursorline
 set scrolloff=4
 
@@ -53,12 +57,11 @@ set noswapfile nowritebackup undofile nobackup
 set backupdir=/tmp/vim/backup
 set undodir+=/tmp/vim/undodir
 
-set shada='10000,n/mega/repo/dotfiles/myshada
+set shada='10000,n/opt/myshada
 set autoread autowrite
 set ignorecase smartcase
 " set list listchars=eol:⏎
 
-set whichwrap=b,s,<,>
 set cmdheight=1
 
 set nohlsearch

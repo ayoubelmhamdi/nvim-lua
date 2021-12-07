@@ -33,7 +33,7 @@ local markdownf =  { formatCommand = "pandoc -f markdown -t gfm -sp --tab-stop=4
 
 
 require"lspconfig".efm.setup {
-
+    autostart = false,
     cmd = {"efm-langserver"},
     init_options = {documentFormatting = true, codeAction = false},
     filetypes = {"tex","javascript", "lua", "python", "cpp", "sh", "json", "yaml", "css", "html"},

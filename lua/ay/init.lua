@@ -1,6 +1,9 @@
 
   require('ay.function.last-position')
 
+-- LSP capabilities as global
+  -- require('ay.ls.lsp.capabilities')
+  require('ay.ls.lsp.signature')
 -- LSP server
   require('ay.ls.lsp.bash.bashls')
   require('ay.ls.lsp.c.clangd')

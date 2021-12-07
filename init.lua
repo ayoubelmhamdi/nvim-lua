@@ -15,3 +15,7 @@
   require('impatient')
 
   vim.cmd('echo reltimestr(reltime(startvim))')
+
+  -- function ddd(a,b,c)
+  --   -- code
+  -- end
