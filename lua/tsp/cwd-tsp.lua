@@ -29,4 +29,13 @@ M.search_proj = function(proj)
     })
 end
 
+M.search_wiki= function()
+    require('telescope.builtin').find_files({
+        prompt_title = '< NVIM > ',
+        hidden = true,
+        cwd = "/mega/repo/wiki",
+        file_ignore_patterns = {'git/', '.github/', '.gitignore'}
+    })
+end
+
 return M
