@@ -23,10 +23,12 @@ local has_words_before = function()
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 -- luasnip setup
-local luasnip = require 'luasnip'
+local luasnip_status_ok, luasnip = pcall(require, 'luasnip')
+if not luasnip_status_ok then return end
 
 -- nvim-cmp setup
-local cmp = require 'cmp'
+local smp_status_ok, cmp = pcall(require, 'cmp')
+if not smp_status_ok then return end
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -64,8 +66,7 @@ cmp.setup {
         end, {"i", "s"})
     },
     sources = {
-        {name = 'path'}, {name = 'luasnip'}, {name = 'nvim_diagnostic'}, {name = 'cmp_tabnine'}, {name = 'treesitter'},
-        {name = 'buffer'}
+        {name = 'path'}, {name = 'luasnip'}, {name = 'nvim_diagnostic'}, {name = 'cmp_tabnine'}, {name = 'treesitter'}, {name = 'buffer'}
         -- { name = 'nvim_lua', keyword_lengh=1 },
         -- { name = 'look' , keyword_lengh=0 },
         -- { name = 'spell' },
@@ -76,9 +77,12 @@ cmp.setup {
 
     },
     formatting = {
+        -- fields = {"kind", "abbr", "menu"},
+        fields = {"kind", "abbr"},
         format = function(entry, vim_item)
             -- fancy icons and a name of kind
-            vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+            -- vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+            vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " "
             -- set a name for each source
             vim_item.menu = ({
                 buffer = "[Buffer]",
@@ -99,6 +103,6 @@ cmp.setup {
             })[entry.source.name]
             return vim_item
         end
-    }
+    },
+    experimenal = {ghost_text = true, native_menu = false}
 }
-
