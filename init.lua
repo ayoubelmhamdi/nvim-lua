@@ -8,9 +8,9 @@
   require('nvPlugins')
   require('tsp')
   require('nvSettings')
-  -- require('nvLSP')
+  -- require('nvLSP') -- removeit
   require('nvIDE')
-  -- require('nvTheme')
+  -- require('nvTheme') --remove it
 
   require('impatient')
 

@@ -64,7 +64,7 @@ cmp.setup {
         end, {"i", "s"})
     },
     sources = {
-        {name = 'path'}, {name = 'luasnip'}, {name = 'nvim_lsp'}, {name = 'cmp_tabnine'}, {name = 'treesitter'},
+        {name = 'path'}, {name = 'luasnip'}, {name = 'nvim_diagnostic'}, {name = 'cmp_tabnine'}, {name = 'treesitter'},
         {name = 'buffer'}
         -- { name = 'nvim_lua', keyword_lengh=1 },
         -- { name = 'look' , keyword_lengh=0 },
@@ -89,7 +89,7 @@ cmp.setup {
                 look = "[Look]",
                 luasnip = " [Luasnip]",
                 nuspell = " [Nuspell]",
-                nvim_lsp = "[LSP]",
+                nvim_diagnostic = "[LSP]",
                 nvim_lua = "[Lua]",
                 path = "[Path]",
                 spell = "[Spell]",

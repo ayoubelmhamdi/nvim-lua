@@ -2,7 +2,7 @@ autocmd FileType lua lua require'cmp'.setup.buffer {
 \   sources = {
 \     { name = 'nvim_lua' },
 \
-\     { name = 'nvim_lsp' },
+\     { name = 'nvim_diagnostic' },
 \     { name = 'luasnip' },
 \     { name = 'buffer' },
 \     { name = 'path' },
@@ -13,7 +13,7 @@ autocmd FileType lua lua require'cmp'.setup.buffer {
 
 autocmd FileType dart lua require'cmp'.setup.buffer {
 \   sources = {
-\     { name = 'nvim_lsp' },
+\     { name = 'nvim_diagnostic' },
 \     { name = 'luasnip' },
 \     { name = 'buffer' },
 \     { name = 'path' },
@@ -27,7 +27,7 @@ autocmd FileType markdown,tex lua require'cmp'.setup.buffer {
 \     { name = 'emoji' },
 \     { name = "latex_symbols" },
 \
-\     { name = 'nvim_lsp' },
+\     { name = 'nvim_diagnostic' },
 \     { name = 'luasnip' },
 \     { name = 'buffer' },
 \     { name = 'path' },
@@ -39,7 +39,7 @@ autocmd FileType markdown,tex lua require'cmp'.setup.buffer {
 
 "\      comment
 "\
-"\     { name = 'nvim_lsp' },
+"\     { name = 'nvim_diagnostic' },
 "\     { name = 'luasnip' },
 "\     { name = 'buffer' },
 "\     { name = 'path' },

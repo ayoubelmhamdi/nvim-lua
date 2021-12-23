@@ -9,6 +9,6 @@ require("lspconfig").clangd.setup {
         "--completion-style=bundled",
         "--malloc-trim"
     },
-    vim.lsp.diagnostic.disable(),
+    -- vim.lsp.diagnostic.disable(),
     -- capabilities = require("lsp").capabilities,
 }

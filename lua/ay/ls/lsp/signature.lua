@@ -5,4 +5,6 @@ signature_config = {
   hint_enable = true,
   -- handler_opts = {border = "single"},
   max_width = 80,
+  -- add time to toogel
+  auto_close_after = 3,
 }
