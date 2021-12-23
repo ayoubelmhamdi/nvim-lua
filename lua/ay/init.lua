@@ -2,7 +2,7 @@
   require('ay/function/last-position')
 
 -- LSP capabilities as global
-  -- require('ay/ls/lsp/capabilities')
+  -- require('ay/ls/lsp/capabilities') -- dir not removed
   require('ay/ls/lsp/signature')
 -- LSP server
   require('ay/ls/lsp/bash/bashls')
@@ -20,15 +20,28 @@
   require("flutter-tools").setup{}
 
 -- theme
+--
 --require('ay/theme/gruvbuddy')
   require('ay/theme/statusline')
   require('ay/theme/blankline')
   require('ay/theme/colorscheme') -- make in the end/to avoid ovvrided
 
-  -- Pligin
-  -- require('ay/conf/lightspeed')
 
   -- function
   require('ay/function/clip_board')
+  require('ay/function/yank')
   require('ay/function/last-position')
+
+
+  -- Pligin
+  require('ay/conf/ay_cmp')
+  require('ay/conf/autopair')
+  require('ay/conf/cheatsheet')
+  require('ay/conf/comment')
+  require('ay/conf/globale')
+  require('ay/conf/lspkind')
+  require('ay/conf/packerPlugins')
+  require('ay/conf/statusline')
+  -- require('ay/conf/lightspeed') -- dir not removed
+
 

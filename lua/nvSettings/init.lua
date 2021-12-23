@@ -1,2 +1,0 @@
-
-require('nvSettings.lua-function')

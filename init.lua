@@ -5,18 +5,9 @@
   -- start chrono !
 
   require('ay')
-  require('nvPlugins')
   require('tsp')
-  require('nvSettings')
-  -- require('nvLSP') -- removeit
-  require('nvIDE')
-  -- require('nvTheme') --remove it
 
   require('impatient')
 
   vim.cmd('echo reltimestr(reltime(startvim))')
-
-  function ddd(a,b,c)
-    -- code
-  end
 
