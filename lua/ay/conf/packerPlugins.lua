@@ -42,7 +42,7 @@ require('packer').startup(function(use)
     use 'onsails/lspkind-nvim'
     use 'saadparwaiz1/cmp_luasnip'
     use 'f3fora/cmp-spell'
-    use 'uga-rosa/cmp-user_dictionary'
+    -- use 'uga-rosa/cmp-user_dictionary'
     use {'tzachar/cmp-tabnine', run = './install.sh'}
     -- use {'f3fora/cmp-nuspell', rocks = {'lua-nuspell'}}
 
